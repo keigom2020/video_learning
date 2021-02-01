@@ -3,14 +3,14 @@
     <head>
         <meta charset='utf-8'>
         <title>Video Learning</title>
-        @include('layout.style-sheet')
+        @include('components.style-sheet')
     </head>
     <body>
       <div id="app">
 
-        @include('layout.header')
+        @include('components.header')
         
-        @include('layout.nav')
+        @include('components.nav')
 
         @yield('content')
 
