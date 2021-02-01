@@ -14,7 +14,9 @@ class VideoController extends Controller
      */
     public function index()
     {
-        //
+        $message = '動画で学習';
+        $videos = Video::all();
+        return view('video.index', ['message' => $message, 'videos' => $videos]);
     }
 
     /**
@@ -24,7 +26,16 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        $video = new Video();
+
+        $video->id = '0.';
+        $video->category_id = '1';
+        $video->title = '導入';
+        $video->detail = 'サンプル動画タイトルです。';
+        $video->content = 'サンプル動画のテキスト文です。';
+        $video->author = '田中太郎';
+        $video->save();
+        return redirect('/videos');
     }
 
     /**
@@ -44,9 +55,11 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function show(Video $video)
+    public function show(Request $request, $id, Video $video)
     {
-        //
+        $message = '動画 ' . $id;
+        $video = Video::find($id);
+        return view('video.show', ['message' => $message, 'video' => $video]);
     }
 
     /**
@@ -78,8 +91,10 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Video $video)
+    public function destroy(Request $request, $id, Video $video)
     {
-        //
+        $video = Video::find($id);
+        $video->delete();
+        return redirect('/videos');
     }
 }
