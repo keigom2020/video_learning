@@ -35,7 +35,7 @@ Route::get('/course/realestate', function () {
     return view('course.realestate.index');
 });
 
-Route::get('/course/insurance/primary', function () {
+Route::get('/course/realestate/primary', function () {
     return view('course.insurance.primary');
 })->name('realestate.primary');
 
@@ -64,7 +64,7 @@ Route::get('/course/stock/advanced', function () {
     return view('course.stock.advanced');
 })->name('stock.advanced');
 
-
+// VideoController制御
 Route::get('/videos', 'VideoController@index')->name('video.index');
 Route::get('/video/{id}', 'VideoController@show')->name('video.show');
 Route::get('/video/new', 'VideoController@create')->name('video.new');

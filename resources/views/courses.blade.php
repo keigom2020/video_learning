@@ -16,7 +16,7 @@
               <div class="card-body">
                 <h5 class="card-title">保険</h5>
                 <p class="card-text">XXXについて動画で学習します。</p>
-                <a href="/course/primary" class="btn btn-info">チャプターの一覧</a>
+                <a href="/course/insurance" class="btn btn-info">チャプターの一覧</a>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@
               <div class="card-body">
                 <h5 class="card-title">不動産</h5>
                 <p class="card-text">XXXについて動画で学習します。</p>
-                <a href="#" class="btn btn-info">チャプタの一覧</a>
+                <a href="/course/realestate" class="btn btn-info">チャプタの一覧</a>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@
               <div class="card-body">
                 <h5 class="card-title">証券</h5>
                 <p class="card-text">XXXについて動画で学習します。</p>
-                <a href="#" class="btn btn-info">チャプタの一覧</a>
+                <a href="/course/stock" class="btn btn-info">チャプタの一覧</a>
               </div>
             </div>
           </div>
