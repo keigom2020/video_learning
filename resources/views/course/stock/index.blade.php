@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container chapter">
 
   <div class="row">
     <p>証券投資</p>
