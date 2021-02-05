@@ -22,7 +22,7 @@
         <p>コースの内容</p>
         <ul class="playerlist">
 
-          @foreach($videos as $video)
+          @foreach($videos_1 as $video)
             <li>
               <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
                 {{ $video->id }}:
