@@ -6,7 +6,8 @@
     <div class="row">
       <h2>{{ $video->id }}：{{ $video->title }}</h2>
       <!-- <p>{{ $message }}</p> -->
-      <p>{{ $video->title }}</p>
+    </div>
+    <div class="row">
       <p>講師：{{ $video->author }}</p>
     </div>
   </div>
@@ -17,23 +18,31 @@
         <iframe src="https://player.vimeo.com/video/{{ $video->video_url }}" width="640" height="361" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <ul class="playerlist col-4">
+      <div class="col-4">
+        <p>コースの内容</p>
+        <ul class="playerlist">
 
-        @foreach($videos as $video)
-          <li>
-            <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
-              {{ $video->id }}:
-              {{ $video->title }}
-            </a>
-          </li>
-        @endforeach
+          @foreach($videos as $video)
+            <li>
+              <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
+                {{ $video->id }}:
+                {{ $video->title }}
+              </a>
+            </li>
+          @endforeach
 
-      </ul>
+        </ul>
+      </div>
+
+      
 
     </div>
 
     <div class="row">
-      
+      <p>{{ $video->detail }}</p>
+    </div>
+    <div class="row">
+      <p>{{ $video->content }}</p>
     </div>
   </div>
 
