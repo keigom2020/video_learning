@@ -61,7 +61,9 @@ class VideoController extends Controller
         $videos = Video::all();
         $video = Video::find($id);
         $videos_1 = video::where('category_id', 1)->get();
-        return view('video.show', ['message' => $message, 'videos' => $videos, 'video' => $video, 'videos_1' => $videos_1]);
+        $videos_2 = video::where('category_id', 2)->get();
+        $videos_3 = video::where('category_id', 3)->get();
+        return view('video.show', ['message' => $message, 'videos' => $videos, 'video' => $video, 'videos_1' => $videos_1, 'videos_2' => $videos_2, 'videos_3' => $videos_3]);
     }
 
     /**
