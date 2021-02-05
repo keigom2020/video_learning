@@ -58,8 +58,9 @@ class VideoController extends Controller
     public function show(Request $request, $id, Video $video)
     {
         $message = '動画 ' . $id;
+        $videos = Video::all();
         $video = Video::find($id);
-        return view('video.show', ['message' => $message, 'video' => $video]);
+        return view('video.show', ['message' => $message, 'videos' => $videos, 'video' => $video]);
     }
 
     /**
