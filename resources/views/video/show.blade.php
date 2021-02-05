@@ -17,11 +17,11 @@
         <iframe src="https://player.vimeo.com/video/{{ $video->video_url }}" width="640" height="361" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <ul class=" col-4">
+      <ul class="playerlist col-4">
 
         @foreach($videos as $video)
           <li>
-            <a href='{{ route("video.show", ["id" =>  $video->id]) }}'>
+            <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
               {{ $video->id }}:
               {{ $video->title }}
             </a>

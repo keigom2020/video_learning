@@ -1,0 +1,15 @@
+
+.playerlist {
+  height: 362px;
+  overflow: auto;
+
+  li {
+    a {
+      padding: 0.6rem;
+      border: 1px solid #fff;
+      display: block;
+      // text-align: center;
+      font-size: 1rem;
+    }
+  }
+}

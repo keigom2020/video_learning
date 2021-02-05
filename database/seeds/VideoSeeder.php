@@ -15,7 +15,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 1,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう1',
+                'title' => '【初級】保険について勉強しよう1',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -25,7 +25,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 2,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう2',
+                'title' => '【初級】保険について勉強しよう2',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -35,7 +35,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 3,
                 'category_id' => 2,
-                'title' => '保険について勉強しよう3',
+                'title' => '【初級】保険について勉強しよう3',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -45,7 +45,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 4,
                 'category_id' => 4,
-                'title' => '保険について勉強しよう4',
+                'title' => '【初級】保険について勉強しよう4',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -55,7 +55,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 5,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう5',
+                'title' => '【初級】保険について勉強しよう5',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -65,7 +65,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 6,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう6',
+                'title' => '【初級】保険について勉強しよう6',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -75,7 +75,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 7,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう7',
+                'title' => '【初級】保険について勉強しよう7',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -85,7 +85,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 8,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう8',
+                'title' => '【初級】保険について勉強しよう8',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -95,7 +95,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 9,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【初級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -105,7 +105,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 10,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【初級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -115,7 +115,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 11,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう1',
+                'title' => '【中級】保険について勉強しよう1',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -125,7 +125,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 12,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう2',
+                'title' => '【中級】保険について勉強しよう2',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -135,7 +135,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 13,
                 'category_id' => 2,
-                'title' => '保険について勉強しよう3',
+                'title' => '【中級】保険について勉強しよう3',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -145,7 +145,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 14,
                 'category_id' => 4,
-                'title' => '保険について勉強しよう4',
+                'title' => '【中級】保険について勉強しよう4',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -155,7 +155,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 15,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう5',
+                'title' => '【中級】保険について勉強しよう5',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -165,7 +165,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 16,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう6',
+                'title' => '【中級】保険について勉強しよう6',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -175,7 +175,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 17,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう7',
+                'title' => '【中級】保険について勉強しよう7',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -185,7 +185,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 18,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう8',
+                'title' => '【中級】保険について勉強しよう8',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -195,7 +195,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 19,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【中級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -205,7 +205,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 20,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【中級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -215,7 +215,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 21,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう1',
+                'title' => '【上級】保険について勉強しよう1',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -225,7 +225,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 22,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう2',
+                'title' => '【上級】保険について勉強しよう2',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -235,7 +235,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 23,
                 'category_id' => 2,
-                'title' => '保険について勉強しよう3',
+                'title' => '【上級】保険について勉強しよう3',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -245,7 +245,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 24,
                 'category_id' => 4,
-                'title' => '保険について勉強しよう4',
+                'title' => '【上級】保険について勉強しよう4',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -255,7 +255,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 25,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう5',
+                'title' => '【上級】保険について勉強しよう5',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -265,7 +265,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 26,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう6',
+                'title' => '【上級】保険について勉強しよう6',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -275,7 +275,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 27,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう7',
+                'title' => '【上級】保険について勉強しよう7',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険について説明します。',
@@ -285,7 +285,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 28,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう8',
+                'title' => '【上級】保険について勉強しよう8',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => '保険商品について説明します。',
@@ -295,7 +295,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 29,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【上級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
@@ -305,7 +305,7 @@ class VideoSeeder extends Seeder
             [
                 'id' => 30,
                 'category_id' => 1,
-                'title' => '保険について勉強しよう9',
+                'title' => '【上級】保険について勉強しよう9',
                 'video_url' => 502084279,
                 'image_src' => '',
                 'detail' => 'それぞれの保険商品のメリットについて説明します。',
