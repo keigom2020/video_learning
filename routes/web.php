@@ -73,7 +73,7 @@ Route::get('/video/1', 'VideoController@show')->name('video.insurance.primary');
 Route::get('/video/11', 'VideoController@show')->name('video.insurance.medium');
 Route::get('/video/21', 'VideoController@show')->name('video.insurance.advanced');
 
-
+// 認証関係
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
