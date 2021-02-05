@@ -69,9 +69,15 @@ Route::get('/videos', 'VideoController@index')->name('video.index');
 Route::get('/video/{id}', 'VideoController@show')->name('video.show');
 Route::get('/video/new', 'VideoController@create')->name('video.new');
 
+// 保険の動画ページ
 Route::get('/video/1', 'VideoController@show')->name('video.insurance.primary');
 Route::get('/video/11', 'VideoController@show')->name('video.insurance.medium');
 Route::get('/video/21', 'VideoController@show')->name('video.insurance.advanced');
+
+// 不動産の動画ページ
+Route::get('/video/31', 'VideoController@show')->name('video.realestate.primary');
+Route::get('/video/41', 'VideoController@show')->name('video.realestate.medium');
+Route::get('/video/51', 'VideoController@show')->name('video.realestate.advanced');
 
 // 認証関係
 Auth::routes();
