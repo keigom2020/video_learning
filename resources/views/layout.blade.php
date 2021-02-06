@@ -10,7 +10,6 @@
 
         @include('components.header')
         
-        @include('components.nav')
 
         <main>
           @yield('content')        
