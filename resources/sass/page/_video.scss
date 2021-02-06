@@ -22,12 +22,20 @@
   overflow: auto;
 
   li {
+    border: 1px solid #eee;
+    
     a {
-      padding: 0.6rem;
+      color: #000;
+      padding: 1rem 1rem;
       border: 1px solid #fff;
       display: block;
       // text-align: center;
       font-size: 1rem;
+
+      &:hover {
+        opacity: 0.6;
+        text-decoration: none;
+      }
     }
   }
 }

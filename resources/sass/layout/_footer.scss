@@ -2,6 +2,15 @@
 .footer {
   background-color: $indigo;
   color: #fff;
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  a {
+    color: #fff;
+  }
 }
 
 .copyright {

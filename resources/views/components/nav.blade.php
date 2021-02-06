@@ -1,6 +1,9 @@
 <!-- <nav class='navbar navbar-expand-md navbar-dark bg-dark fixed-top'> -->
-<nav class="container pt-4 pb-4">
+<nav class="container pt-4">
   <ul class="row">
+    <li class="mr-2">
+      <a href={{ route('courses') }}>コース一覧</a>
+    </li>
     <li class="mr-2">
       <a href={{ route('insurance') }}>保険コース</a>
     </li>

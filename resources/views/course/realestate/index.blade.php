@@ -17,7 +17,8 @@
     <div class="card mb-3 mx-auto" style="max-width: 100％;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="https://placehold.jp/264x180.png" alt="">
+          <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
+          <img src="../../img/thumb_realestate.jpeg" alt="">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -34,7 +35,8 @@
     <div class="card mb-3 mx-auto" style="max-width: 100%;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="https://placehold.jp/264x180.png" alt="">
+          <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
+          <img src="../../img/thumb_realestate.jpeg" alt="">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -51,7 +53,8 @@
     <div class="card mb-3 mx-auto" style="max-width: 100%;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="https://placehold.jp/264x180.png" alt="">
+          <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
+          <img src="../../img/thumb_realestate.jpeg" alt="">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -65,6 +68,10 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="row">
+    <a href="{{ route('courses') }}" class="btn btn-info">コース一覧に戻る</a>
   </div>
 
 </div>
