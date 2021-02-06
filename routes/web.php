@@ -17,7 +17,7 @@ Route::get('/courses', function () {
 // 保険コース
 Route::get('/course/insurance', function () {
     return view('course.insurance.index');
-});
+})->name('insurance');
 
 // Route::get('/course/insurance/primary', function () {
 //     return view('course.insurance.primary.index');
@@ -34,7 +34,7 @@ Route::get('/course/insurance', function () {
 // 不動産コース
 Route::get('/course/realestate', function () {
     return view('course.realestate.index');
-});
+})->name('realestate');
 
 // Route::get('/course/realestate/primary', function () {
 //     return view('course.realestate.primary');
@@ -51,19 +51,19 @@ Route::get('/course/realestate', function () {
 // 証券投資コース
 Route::get('/course/stock', function () {
     return view('course.stock.index');
-});
+})->name('stock');
 
-Route::get('/course/stock/primary', function () {
-    return view('course.stock.primary');
-})->name('stock.primary');
+// Route::get('/course/stock/primary', function () {
+//     return view('course.stock.primary');
+// })->name('stock.primary');
 
-Route::get('/course/stock/medium', function () {
-    return view('course.stock.medium');
-})->name('stock.medium');
+// Route::get('/course/stock/medium', function () {
+//     return view('course.stock.medium');
+// })->name('stock.medium');
 
-Route::get('/course/stock/advanced', function () {
-    return view('course.stock.advanced');
-})->name('stock.advanced');
+// Route::get('/course/stock/advanced', function () {
+//     return view('course.stock.advanced');
+// })->name('stock.advanced');
 
 // VideoController制御
 Route::get('/videos', 'VideoController@index')->name('video.index');
