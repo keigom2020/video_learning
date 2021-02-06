@@ -4,13 +4,13 @@
 
 <div class="container chapter">
 
-  <div class="row">
-    <p>不動産</p>
-  </div>
+  <h2 class="heading__lv2">
+    コース：不動産コース
+  </h2>
 
-  <div class="h2 row">
+  <h2 class="heading__lv2">
     チャプター一覧
-  </div>
+  </h2>
 
   <div class="row mt-4">
 
