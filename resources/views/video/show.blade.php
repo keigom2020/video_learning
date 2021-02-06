@@ -4,7 +4,7 @@
 
   <div class="container">
     <div class="row">
-      <h2>{{ $video->id }}：{{ $video->title }}</h2>
+      <h2 class="heading__lv2">{{ $video->id }}：{{ $video->title }}</h2>
       <!-- <p>{{ $message }}</p> -->
     </div>
     <div class="row">
@@ -14,11 +14,15 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-8">
+      <!-- <div class="col-8">
         <iframe src="https://player.vimeo.com/video/{{ $video->video_url }}" width="640" height="361" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div> -->
+
+      <div style="padding:56.25% 0 0 0;position:relative;" class="col-md-8">
+        <iframe src="https://player.vimeo.com/video/{{ $video->video_url }}?byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <div class="col-4">
+      <div class="col-md-4">
         <p>コースの内容</p>
         <ul class="playerlist">
 

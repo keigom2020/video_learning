@@ -26,3 +26,14 @@ button {
     color: #fff;
   }
 }
+
+img {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+  .heading__lv2 {
+    font-size: 1.2rem;
+  }
+}

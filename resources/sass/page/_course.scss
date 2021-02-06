@@ -8,3 +8,15 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .chapter {
+    // &.container {
+    //   max-width: 900px;
+    // }
+  
+    .card {
+      width: 90%;
+    }
+  }
+}

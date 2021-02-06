@@ -14,7 +14,7 @@
 
   <div class="row mt-4">
 
-    <div class="card mb-3" style="max-width: 100％;">
+    <div class="card mb-3 mx-auto" style="max-width: 100％;">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="https://placehold.jp/264x180.png" alt="">
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="card mb-3" style="max-width: 100%;">
+    <div class="card mb-3 mx-auto" style="max-width: 100%;">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="https://placehold.jp/264x180.png" alt="">
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="card mb-3" style="max-width: 100%;">
+    <div class="card mb-3 mx-auto" style="max-width: 100%;">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="https://placehold.jp/264x180.png" alt="">
