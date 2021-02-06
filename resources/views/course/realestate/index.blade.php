@@ -5,7 +5,7 @@
 <div class="container chapter">
 
   <h2 class="heading__lv2">
-    コース：不動産コース
+    コース名：不動産コース
   </h2>
 
   <h2 class="heading__lv2">

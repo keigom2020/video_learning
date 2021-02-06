@@ -5,7 +5,7 @@
 <div class="container chapter">
 
   <h2 class="heading__lv2">
-    コース：保険コース
+    コース名：保険コース
   </h2>
 
   <h2 class="heading__lv2">
