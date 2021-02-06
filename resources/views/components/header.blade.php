@@ -41,8 +41,19 @@
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                               @csrf
                           </form>
+
+                          <a class="for-pc dropdown-item" href={{ route('mypage') }}>
+                              マイページ
+                          </a>
                       </div>
                   </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="for-sp" href={{ route('mypage') }}>
+                        マイページ
+                    </a>
+                  </li>
+                  
               @endguest
           </ul>
       </div>
