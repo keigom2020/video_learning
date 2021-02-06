@@ -7,7 +7,7 @@ Route::get('/', function () {
 // マイページ、ダッシュボード
 Route::get('/mypage', function () {
     return view('mypage');
-});
+})->name('mypage');
 
 // コース一覧
 Route::get('/courses', function () {
