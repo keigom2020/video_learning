@@ -82,4 +82,9 @@ Route::get('/video/51', 'VideoController@show')->name('video.realestate.advanced
 // 認証関係
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function() {
+    return redirect('/courses');
+});
+
+
