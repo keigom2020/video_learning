@@ -32,7 +32,26 @@ img {
 }
 
 
-@media screen and (max-width: 767px) {
+.navbar-nav {
+  align-items: center;
+}
+
+.for-pc {
+  display: block;
+}
+.for-sp {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .for-pc {
+    display: none;
+  }
+  .for-sp {
+    display: block;
+  }
+
   .heading__lv2 {
     font-size: 1.2rem;
   }
