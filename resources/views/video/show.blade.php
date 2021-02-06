@@ -22,14 +22,46 @@
         <p>コースの内容</p>
         <ul class="playerlist">
 
-          @foreach($videos_1 as $video)
+
+
+
+
+
+
+
+
+
+
+          @if($category_id = 1)
+            @foreach($videos_1 as $video)
             <li>
               <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
                 {{ $video->id }}:
                 {{ $video->title }}
               </a>
             </li>
-          @endforeach
+            @endforeach
+
+          @elseif($category_id = 2)
+            @foreach($videos_2 as $video)
+            <li>
+              <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
+                {{ $video->id }}:
+                {{ $video->title }}
+              </a>
+            </li>
+            @endforeach
+
+          @elseif($category_id = 3)
+            @foreach($videos_3 as $video)
+            <li>
+              <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
+                {{ $video->id }}:
+                {{ $video->title }}
+              </a>
+            </li>
+            @endforeach
+          @endif
 
         </ul>
       </div>

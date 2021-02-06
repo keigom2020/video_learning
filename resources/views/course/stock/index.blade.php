@@ -25,7 +25,7 @@
             <small class="text-muted"></small>
             <p class="card-text">ここでは、〜概要を学習します。そして、〜確認します。</p>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-            <a href={{ route('stock'.primary') }} class="btn btn-info">このチャプターを受講する</a>
+            <a href={{ route('video.stock.primary') }} class="btn btn-info">このチャプターを受講する</a>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
             <small class="text-muted"></small>
             <p class="card-text">ここでは、でする場合、方法について学習します。をと、のやをることができます。</p>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-            <a href={{ route('stock.medium') }} class="btn btn-info">このチャプターを受講する</a>
+            <a href={{ route('video.stock.medium') }} class="btn btn-info">このチャプターを受講する</a>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
             <small class="text-muted"></small>
             <p class="card-text">ここでは、に、のをします。と、のをことができます。</p>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-            <a href={{ route('stock.advanced') }} class="btn btn-info">このチャプターを受講する</a>
+            <a href={{ route('video.stock.advanced') }} class="btn btn-info">このチャプターを受講する</a>
           </div>
         </div>
       </div>

@@ -12,41 +12,41 @@ Route::get('/mypage', function () {
 // コース一覧
 Route::get('/courses', function () {
     return view('courses');
-});
+})->name('courses');
 
 // 保険コース
 Route::get('/course/insurance', function () {
     return view('course.insurance.index');
 });
 
-Route::get('/course/insurance/primary', function () {
-    return view('course.insurance.primary.index');
-})->name('insurance.primary');
+// Route::get('/course/insurance/primary', function () {
+//     return view('course.insurance.primary.index');
+// })->name('insurance.primary');
 
-Route::get('/course/insurance/medium', function () {
-    return view('course.insurance.medium');
-})->name('insurance.medium');
+// Route::get('/course/insurance/medium', function () {
+//     return view('course.insurance.medium');
+// })->name('insurance.medium');
 
-Route::get('/course/insurance/advanced', function () {
-    return view('course.insurance.advanced');
-})->name('insurance.advanced');
+// Route::get('/course/insurance/advanced', function () {
+//     return view('course.insurance.advanced');
+// })->name('insurance.advanced');
 
 // 不動産コース
 Route::get('/course/realestate', function () {
     return view('course.realestate.index');
 });
 
-Route::get('/course/realestate/primary', function () {
-    return view('course.insurance.primary');
-})->name('realestate.primary');
+// Route::get('/course/realestate/primary', function () {
+//     return view('course.realestate.primary');
+// })->name('realestate.primary');
 
-Route::get('/course/realestate/medium', function () {
-    return view('course.realestate.medium');
-})->name('realestate.medium');
+// Route::get('/course/realestate/medium', function () {
+//     return view('course.realestate.medium');
+// })->name('realestate.medium');
 
-Route::get('/course/realestate/advanced', function () {
-    return view('course.realestate.advanced');
-})->name('realestate.advanced');
+// Route::get('/course/realestate/advanced', function () {
+//     return view('course.realestate.advanced');
+// })->name('realestate.advanced');
 
 // 証券投資コース
 Route::get('/course/stock', function () {
@@ -79,6 +79,11 @@ Route::get('/video/21', 'VideoController@show')->name('video.insurance.advanced'
 Route::get('/video/31', 'VideoController@show')->name('video.realestate.primary');
 Route::get('/video/41', 'VideoController@show')->name('video.realestate.medium');
 Route::get('/video/51', 'VideoController@show')->name('video.realestate.advanced');
+
+// 証券投資の動画ページ
+Route::get('/video/61', 'VideoController@show')->name('video.stock.primary');
+Route::get('/video/71', 'VideoController@show')->name('video.stock.medium');
+Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
 
 // 認証関係
 Auth::routes();
