@@ -1,14 +1,15 @@
 <?php
 
 Route::get('/', function () {
-    // return view('welcome');
     return view('top');
 });
 
+// マイページ、ダッシュボード
 Route::get('/mypage', function () {
     return view('mypage');
 });
 
+// コース一覧
 Route::get('/courses', function () {
     return view('courses');
 });
@@ -54,7 +55,7 @@ Route::get('/course/stock', function () {
 
 Route::get('/course/stock/primary', function () {
     return view('course.stock.primary');
-})->name('realestate.primary');
+})->name('stock.primary');
 
 Route::get('/course/stock/medium', function () {
     return view('course.stock.medium');
