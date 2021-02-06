@@ -38,7 +38,7 @@
 
 
             @if($category_id = 1)
-              @foreach($videos_1 as $video)
+              @foreach($video_player as $video)
               <li>
                 <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="text-center">
                   {{ $video->id }}:
