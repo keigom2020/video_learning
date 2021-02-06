@@ -9,8 +9,12 @@
       <div id="app">
 
         @include('components.header')
+
+        @include('components.nav')
         
-        @yield('content')    
+        @yield('content')
+
+        @include('components.footer')
 
       </div>
 
