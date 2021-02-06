@@ -11,18 +11,27 @@
   </div>
   
   <section class="mt-4">
-    <div class="row mx-auto text-center">
-      <a href="/register" class="btn btn-info mx-auto">
-          新規登録する
-      </a>
-    </div>
+　　  
+      @guest
+        <div class="row mx-auto text-center mt-3">
+          <a class="btn btn-info mx-auto nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+        </div>        
+        @if (Route::has('register'))
+          <div class="row mx-auto text-center mt-3">
+            <a class="btn btn-info mx-auto nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+          </div>        
+        @endif
 
-    <div class="row mx-auto text-center  mt-3">
-      <a href="/login" class="btn btn-info mx-auto">
-          ログインする
-      </a>
-    </div>
+      @else
+    <li class="nav-item dropdown">
+      ようこそ{{ Auth::user()->name }} さん
+    </li>
+
+      @endguest
+
   </section>
+
+
 </div>
 
 @endsection('content')
