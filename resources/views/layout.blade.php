@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>Video Learning</title>
+        <title>VideoLearning</title>
         @include('components.style-sheet')
     </head>
     <body>

@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="row">
-    <h2 class="mx-auto">Video Learning</h2>
+    <h2 class="mx-auto">VideoLearning</h2>
   </div>
   <div class="row">
     <h3 class="mx-auto text-center">動画で学習する<br>プラットフォーム。</h3>
