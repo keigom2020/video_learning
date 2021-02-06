@@ -39,14 +39,12 @@
       </ul>
     </div>
 
-    
-
   </div>
 
-  <div class="row mt-4">
+  <div class="row mt-4 ml-5">
     <p>{{ $video->detail }}</p>
   </div>
-  <div class="row">
+  <div class="row ml-5">
     <p>{{ $video->content }}</p>
   </div>
 </div>
