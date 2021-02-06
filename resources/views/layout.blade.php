@@ -12,7 +12,9 @@
 
         @include('components.nav')
         
-        @yield('content')
+        <main>
+          @yield('content')
+        </main>
 
         @include('components.footer')
 
