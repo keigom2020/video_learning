@@ -10,10 +10,7 @@
 
         @include('components.header')
         
-
-        <main>
-          @yield('content')        
-        </main>
+        @yield('content')    
 
       </div>
 
