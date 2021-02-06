@@ -93,4 +93,6 @@
     </div>
   </div>
 
+  <script src="{{ asset('/js/video.js') }}"></script>
+
 @endsection

@@ -14,6 +14,11 @@
   }
 }
 
+body, html, .player, .fallback {
+  height: auto !important;
+}
+
+
 @media screen and (max-width: 768px) {
   .playerlist {
     height: 200px;
