@@ -29,3 +29,18 @@
   background-image: url(../img/bg_top.jpg);
   background-size: cover;
 }
+
+.layer {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  max-width: 70%;
+  border-radius: 8px;
+}
+
+@media screen and(max-width: 767px) {
+  #top {
+    .heading__lv2 {
+      font-size: 3rem;
+    }
+  }
+}

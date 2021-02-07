@@ -11,10 +11,10 @@
     <h3 class="mx-auto text-center heading__lv3">動画で学習する<br>プラットフォーム。</h3>
   </div>
 
-  <section class="mt-4">
+  <section class="mt-4 pb-4 layer">
   　　  
       @guest
-        <div class="row mx-auto text-center mt-3">
+        <div class="row mx-auto text-center">
           <a class="btn btn-info mx-auto nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
         </div>        
         @if (Route::has('register'))
