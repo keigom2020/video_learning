@@ -11,7 +11,7 @@
     <h3 class="mx-auto text-center heading__lv3">動画で学習する<br>プラットフォーム。</h3>
   </div>
 
-  <section class="mt-4 pb-4 layer">
+  <section class="mt-5 pb-4 layer">
   　　  
       @guest
         <div class="row mx-auto text-center">
