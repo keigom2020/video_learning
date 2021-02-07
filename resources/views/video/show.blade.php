@@ -27,11 +27,11 @@
       <h3 class="headin__lv3">コースの内容</h3>
       <ul class="playerlist">
 
-      @foreach($video_player as $video)
+      @foreach($video_players as $video_player)
         <li>
-          <a href='{{ route("video.show", ["id" =>  $video->id]) }}' class="">
-            {{ $video->id }}:
-            {{ $video->title }}
+          <a href='{{ route("video.show", ["id" =>  $video_player->id]) }}' class="">
+            {{ $video_player->id }}:
+            {{ $video_player->title }}
           </a>
         </li>
       @endforeach
