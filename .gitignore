@@ -17,3 +17,5 @@ _index.md
 /public/storage
 
 .DS_Store
+
+_memo/**
