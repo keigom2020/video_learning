@@ -29,7 +29,7 @@
 
       @foreach($video_players as $video_player)
         <li>
-          <a href='{{ route("video.show", ["id" =>  $video_player->id]) }}' class="">
+          <a href='{{ route("video.show", ["id" =>  $video_player->id]) }}' class="" id='{{ $video_player->id }}'>
             {{ $video_player->id }}:
             {{ $video_player->title }}
           </a>
@@ -54,9 +54,12 @@
     <div class="mr-4">
       <a href="{{ route('courses') }}" class="btn btn-info">一覧に戻る</a>
     </div>
+
     <div class="">
       <a href='{{ route("video.show", ["id" =>  $video->id+1]) }}' class="btn btn-info">次の動画へ</a>
     </div>
+
+
   </div>
 </div>
 
