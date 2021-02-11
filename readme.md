@@ -15,6 +15,16 @@ ID, PWは「test@gmail.com」「testtest」です。
 - Heroku
 
 ## Installation
+### githubからローカルにクローン
+>git clone {url}
+
+### npmのモジュールを有効にする
+>npm install
+>npm run dev
+
+### ブラウザ上で表示
+>php artisan serve
+>npm run watch
 
 ## 機能一覧
 - ユーザー登録、ログイン機能
