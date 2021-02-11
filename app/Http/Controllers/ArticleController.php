@@ -15,8 +15,6 @@ class ArticleController extends Controller
     public function index()
     {
         $message = '記事一覧';
-        // $videos = Video::all();
-        // return view('article.index', ['message' => $message, 'videos' => $videos]);
         $articles = Article::all();
         return view('article.index', ['message' => $message, 'articles' => $articles]);
     }

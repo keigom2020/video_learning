@@ -63,8 +63,8 @@ Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
 
 
 // 記事一覧を表示
-Route::get('/articles', 'ArticleController@index')->name('articles');
-
+Route::get('/articles', 'ArticleController@index')->name('article.index');
+Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
 // 認証関係
 Auth::routes();
