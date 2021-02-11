@@ -3,17 +3,17 @@
 @section('content')
 
 <div class="container">
-  <h2>動画</h2>
+  <h2>記事</h2>
   <p>{{ $message }}</p>
 </div>
 
-@foreach ($videos as $video)
+@foreach ($articles as $article)
   
   <div class="container">
     <p>
-      <a href='{{ route("video.show", ["id" =>  $video->id]) }}'>
-        {{ $video->id }}:
-        {{ $video->title }}
+      <a href='{{ route("article.show", ["id" =>  $article->id]) }}'>
+        {{ $article->id }}:
+        {{ $article->title }}
       </a>
     </p>
   </div>
@@ -22,7 +22,7 @@
 
 <div class="container">
   <div>
-    <a href={{ route('video.new') }}>新規投稿</a>
+    <a href=''>新規投稿</a>
   </div>
 </div>
 

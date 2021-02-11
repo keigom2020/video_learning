@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Video;
 use App\Article;
 use Illuminate\Http\Request;
 
@@ -16,19 +15,11 @@ class ArticleController extends Controller
     public function index()
     {
         $message = '記事一覧';
-        $videos = Video::all();
-        return view('article.index', ['message' => $message, 'videos' => $videos]);
+        // $videos = Video::all();
+        // return view('article.index', ['message' => $message, 'videos' => $videos]);
+        $articles = Article::all();
+        return view('article.index', ['message' => $message, 'articles' => $articles]);
     }
-
-    /** 
-    * @return view
-    * ブログ一覧を表示する
-    *
-    */
-    public function showList() {
-        return view('article.index');
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -57,9 +48,12 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Request $request, $id, Article $article)
     {
-        //
+        $message = '記事 ' . $id;
+        $articles = Article::all();
+        $article = Article::find($id);
+        return view('article.show', ['message' => $message, 'articles' => $articles, 'article' => $article]);
     }
 
     /**
