@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Video;
 use App\Article;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $message = '記事一覧';
+        $videos = Video::all();
+        return view('article.index', ['message' => $message, 'videos' => $videos]);
     }
 
     /** 
