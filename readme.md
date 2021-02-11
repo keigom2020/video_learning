@@ -1,3 +1,27 @@
+## VideoLearning
+動画学習サイトです。
+UIや画面遷移はUdemyやpaizaラーニングを参考にしています。
+金融リテラシーを学習するコースを想定して作成しています。
+動画はvimeoという動画サイトの動画をランダムで埋め込んでいます。
+
+## URL
+[https://video-learning02.herokuapp.com/](https://video-learning02.herokuapp.com/)
+ID, PWは「test@gmail.com」「testtest」です。
+
+## 環境
+- php 7.3.25
+- Laravel 6.20.15
+- MySQL
+- Heroku
+
+## Installation
+
+## 機能一覧
+- ユーザー登録、ログイン機能
+- 動画閲覧機能
+
+# 
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
