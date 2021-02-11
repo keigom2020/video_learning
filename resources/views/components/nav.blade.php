@@ -2,6 +2,9 @@
 <nav class="container pt-4">
   <ul class="row">
     <li class="mr-2">
+      <a href={{ route('article.index') }}>記事一覧</a>
+    </li>
+    <li class="mr-2">
       <a href={{ route('courses') }}>コース一覧</a>
     </li>
     <li class="mr-2">
