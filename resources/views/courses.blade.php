@@ -46,6 +46,17 @@
             </div>
           </div>
 
+          <!-- <div class="col-sm-3 col-xl-3">
+            <div class="card shadow-sm">
+              <img src="../../img/thumb_stock.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">その他更新動画</h5>
+                <p class="card-text">更新動画をご覧いただけます。</p>
+                <a href="/course/stock" class="btn btn-info">チャプターの一覧</a>
+              </div>
+            </div>
+          </div> -->
+
         </div>
       </div>
 
