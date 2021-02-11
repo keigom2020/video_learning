@@ -66,6 +66,13 @@ Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
 Route::get('/articles', 'ArticleController@index')->name('article.index');
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
+
+// HTTPステータスコードを引数に、該当するエラーページを表示させる
+Route::get('error/{code}', function ($code) {
+  abort($code);
+});
+
+
 // 認証関係
 Auth::routes();
 
