@@ -60,8 +60,12 @@ class VideoController extends Controller
         $message = '動画 ' . $id;
         $videos = Video::all();
         $video = Video::find($id);
+        // $videoがnullなら404表示にする　短い記述で住むならコントローラでの記述でもOK
+        // この記述だとコントローラ側に書くしかない if文
+        // もしくはmodel next_video_idみたいな
+        $nextVideo = Video::nextVideo($id+1);
         $video_players = video::where('category_id', $video->category_id)->get();
-        return view('video.show', ['message' => $message, 'videos' => $videos, 'video' => $video, 'video_players' => $video_players]);
+        return view('video.show', ['nextVideo' => $nextVideo, 'message' => $message, 'videos' => $videos, 'video' => $video, 'video_players' => $video_players]);
     }
 
     /**

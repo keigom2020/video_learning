@@ -55,9 +55,17 @@
       <a href="{{ route('courses') }}" class="btn btn-info">一覧に戻る</a>
     </div>
 
-    <div class="">
-      <a href='{{ route("video.show", ["id" =>  $video->id+1]) }}' class="btn btn-info">次の動画へ</a>
-    </div>
+    
+
+    @if($nextVideo)
+      <div class="">
+        <a href='{{ route("video.show", ["id" =>  $video->id+1]) }}' class="btn btn-info">次の動画へ</a>
+      </div>
+      @else
+      <div>
+        <p>この動画が最後です。</p>
+      </div>
+    @endif
 
 
   </div>
