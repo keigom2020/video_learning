@@ -23,14 +23,6 @@ Route::get('/course/insurance', function () {
 //     return view('course.insurance.primary.index');
 // })->name('insurance.primary');
 
-// Route::get('/course/insurance/medium', function () {
-//     return view('course.insurance.medium');
-// })->name('insurance.medium');
-
-// Route::get('/course/insurance/advanced', function () {
-//     return view('course.insurance.advanced');
-// })->name('insurance.advanced');
-
 // 不動産コース
 Route::get('/course/realestate', function () {
     return view('course.realestate.index');
@@ -40,14 +32,6 @@ Route::get('/course/realestate', function () {
 //     return view('course.realestate.primary');
 // })->name('realestate.primary');
 
-// Route::get('/course/realestate/medium', function () {
-//     return view('course.realestate.medium');
-// })->name('realestate.medium');
-
-// Route::get('/course/realestate/advanced', function () {
-//     return view('course.realestate.advanced');
-// })->name('realestate.advanced');
-
 // 証券投資コース
 Route::get('/course/stock', function () {
     return view('course.stock.index');
@@ -56,14 +40,6 @@ Route::get('/course/stock', function () {
 // Route::get('/course/stock/primary', function () {
 //     return view('course.stock.primary');
 // })->name('stock.primary');
-
-// Route::get('/course/stock/medium', function () {
-//     return view('course.stock.medium');
-// })->name('stock.medium');
-
-// Route::get('/course/stock/advanced', function () {
-//     return view('course.stock.advanced');
-// })->name('stock.advanced');
 
 // VideoController制御
 Route::get('/videos', 'VideoController@index')->name('video.index');
@@ -84,6 +60,11 @@ Route::get('/video/51', 'VideoController@show')->name('video.realestate.advanced
 Route::get('/video/61', 'VideoController@show')->name('video.stock.primary');
 Route::get('/video/71', 'VideoController@show')->name('video.stock.medium');
 Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
+
+
+// 記事一覧を表示
+Route::get('/articles', 'ArticleController@showList')->name('articles');
+
 
 // 認証関係
 Auth::routes();
