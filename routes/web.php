@@ -9,37 +9,49 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
-// コース一覧
-Route::get('/courses', function () {
-    return view('courses');
-})->name('courses');
 
-// 保険コース
-Route::get('/course/insurance', function () {
-    return view('course.insurance.index');
-})->name('insurance');
+//ミドルウェアでのグループ化
+Route::group(['middleware' => ['auth']], function () {
 
-// Route::get('/course/insurance/primary', function () {
-//     return view('course.insurance.primary.index');
-// })->name('insurance.primary');
+    // コース一覧
+    Route::get('/courses', function () {
+        return view('courses');
+    })->name('courses');
 
-// 不動産コース
-Route::get('/course/realestate', function () {
-    return view('course.realestate.index');
-})->name('realestate');
+    // 保険コース
+    Route::get('/course/insurance', function () {
+        return view('course.insurance.index');
+    })->name('insurance');
 
-// Route::get('/course/realestate/primary', function () {
-//     return view('course.realestate.primary');
-// })->name('realestate.primary');
+    // Route::get('/course/insurance/primary', function () {
+    //     return view('course.insurance.primary.index');
+    // })->name('insurance.primary');
 
-// 証券投資コース
-Route::get('/course/stock', function () {
-    return view('course.stock.index');
-})->name('stock');
+    // 不動産コース
+    Route::get('/course/realestate', function () {
+        return view('course.realestate.index');
+    })->name('realestate');
 
-// Route::get('/course/stock/primary', function () {
-//     return view('course.stock.primary');
-// })->name('stock.primary');
+    // Route::get('/course/realestate/primary', function () {
+    //     return view('course.realestate.primary');
+    // })->name('realestate.primary');
+
+    // 証券投資コース
+    Route::get('/course/stock', function () {
+        return view('course.stock.index');
+    })->name('stock');
+
+    // Route::get('/course/stock/primary', function () {
+    //     return view('course.stock.primary');
+    // })->name('stock.primary');
+
+    // 記事一覧を表示
+    Route::get('/articles', 'ArticleController@index')->name('article.index');
+    Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
+
+});
+
+
 
 // VideoController制御
 Route::get('/videos', 'VideoController@index')->name('video.index');
@@ -62,11 +74,6 @@ Route::get('/video/71', 'VideoController@show')->name('video.stock.medium');
 Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
 
 
-// 記事一覧を表示
-Route::get('/articles', 'ArticleController@index')->name('article.index');
-Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
-
-
 // HTTPステータスコードを引数に、該当するエラーページを表示させる
 Route::get('error/{code}', function ($code) {
   abort($code);
@@ -78,7 +85,7 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', function() {
-    return redirect('/courses');
+    return redirect('/top');
 });
 
 
