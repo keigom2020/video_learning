@@ -7,6 +7,8 @@
   <p>{{ $message }}</p>
 </div>
 
+@can('system-only')
+
 @foreach ($videos as $video)
   
   <div class="container">
@@ -26,6 +28,6 @@
   </div>
 </div>
 
-<router-view />
+@endcan
 
 @endsection
