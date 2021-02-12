@@ -24,7 +24,7 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $video = new Video();
 
@@ -34,6 +34,9 @@ class VideoController extends Controller
         $video->detail = 'サンプル動画タイトルです。';
         $video->content = 'サンプル動画のテキスト文です。';
         $video->author = '田中太郎';
+        $video->video_url = 391525572;
+        $video->image_src = '';
+        
         $video->save();
         return redirect('/videos');
     }
