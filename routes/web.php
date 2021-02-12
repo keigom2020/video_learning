@@ -9,7 +9,6 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
-
 //ミドルウェアでのグループ化
 Route::group(['middleware' => ['auth']], function () {
 
@@ -49,9 +48,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/articles', 'ArticleController@index')->name('article.index');
     Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
+    //
+    Route::get('/', function() {
+        return redirect('/mypage');
+    });
+
 });
-
-
 
 // VideoController制御
 Route::get('/videos', 'VideoController@index')->name('video.index');
@@ -78,7 +80,6 @@ Route::get('/video/81', 'VideoController@show')->name('video.stock.advanced');
 Route::get('error/{code}', function ($code) {
   abort($code);
 });
-
 
 // 認証関係
 Auth::routes();
