@@ -55,10 +55,14 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
+// システム管理者のみ
+Route::group(['middleware' => ['auth', 'can:system-only']], function () {
+    Route::get('/videos', 'VideoController@index')->name('video.index');
+    Route::get('/video/new', 'VideoController@create')->name('video.new');
+});
+
 // VideoController制御
-Route::get('/videos', 'VideoController@index')->name('video.index');
 Route::get('/video/{id}', 'VideoController@show')->name('video.show');
-Route::get('/video/new', 'VideoController@create')->name('video.new');
 
 // 保険の動画ページ
 Route::get('/video/1', 'VideoController@show')->name('video.insurance.primary');
