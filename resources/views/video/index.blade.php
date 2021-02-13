@@ -13,10 +13,14 @@
   
   <div class="container">
     <p>
+
       <a href='{{ route("video.show", ["id" =>  $video->id]) }}'>
         {{ $video->id }}:
         {{ $video->title }}
       </a>
+
+    <a href={{ route('video.delete') }}>削除</a>
+
     </p>
   </div>
 
@@ -27,6 +31,7 @@
     <a href={{ route('video.new') }}>新規投稿</a>
   </div>
 </div>
+
 
 @endcan
 
