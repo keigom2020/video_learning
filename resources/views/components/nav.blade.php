@@ -1,9 +1,9 @@
 <!-- <nav class='navbar navbar-expand-md navbar-dark bg-dark fixed-top'> -->
 <nav class="container pt-4">
   <ul class="row">
-    <li class="mr-2">
+    <!-- <li class="mr-2">
       <a href={{ route('article.index') }}>記事一覧</a>
-    </li>
+    </li> -->
     <li class="mr-2">
       <a href={{ route('courses') }}>コース一覧</a>
     </li>
