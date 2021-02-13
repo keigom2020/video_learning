@@ -4,6 +4,10 @@ Route::get('/', function () {
     return view('top');
 });
 
+Route::get('/top', function () {
+    return view('top');
+});
+
 // マイページ、ダッシュボード
 Route::get('/mypage', function () {
     return view('mypage');
