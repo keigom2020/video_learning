@@ -26,6 +26,18 @@ class VideoController extends Controller
      */
     public function create(Request $request)
     {
+        $message = 'New Video';
+        return view('video.new', ['message' => $message]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
         $video = new Video();
 
         $video->id = '0.';
@@ -39,17 +51,6 @@ class VideoController extends Controller
         
         $video->save();
         return redirect('/videos');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -77,9 +78,11 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function edit(Video $video)
+    public function edit(Request $request, Video $video)
     {
-        //
+        $message = 'Edit your Video ' . $id;
+        $video = Video::find($id);
+        return view('show', ['message' => $message, 'video' => $video]);
     }
 
     /**
