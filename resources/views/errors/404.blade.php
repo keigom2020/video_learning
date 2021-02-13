@@ -11,5 +11,6 @@
 {{-- https://www.ritolab.com/entry/57 --}}
 
 @section('link')
-  <p><a href="{{env('APP_URL')}}">to TOP&gt;&gt;</a></p>
+  <!-- <p><a href="{{env('APP_URL')}}">to TOP&gt;&gt;</a></p> -->
+  <p><a href="/">to TOP&gt;&gt;</a></p>
 @endsection
