@@ -99,6 +99,9 @@ Route::get('error/{code}', function ($code) {
 // 認証関係
 Auth::routes();
 
+# ゲストユーザーログイン
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
+
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', function() {
     return redirect('/top');

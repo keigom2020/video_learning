@@ -23,6 +23,10 @@
           </div>        
         @endif
 
+        <div class="row mx-auto text-center mt-3">
+          <a class="btn btn-info mx-auto nav-link" href="{{ route('login.guest') }}">{{ __('ゲストログイン') }}</a>
+        </div>
+
         @else
 
           <div class="nav-item dropdown">

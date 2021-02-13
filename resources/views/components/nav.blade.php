@@ -20,6 +20,14 @@
       <a href={{ route('stock') }}>証券投資コース</a>
     </li>
 
+    @guest
+      <li class="mr-2">
+        <a href="{{ route('login.guest') }}" class="text-white">
+          ゲストログイン
+        </a>
+      </li>
+    @endguest
+
     <!-- <li class="">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdptWokRvN-CRv-GjtcmTZExpBzozE-2HS8Lh7xV5Odv7Jk1A/viewform?vc=0&c=0&w=1&flr=0&gxids=7628" target="_blank" rel="noopener">ワンポイントレッスン申し込み</a>
     </li> -->
