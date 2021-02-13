@@ -59,6 +59,13 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth', 'can:system-only']], function () {
     Route::get('/videos', 'VideoController@index')->name('video.index');
     Route::get('/video/new', 'VideoController@create')->name('video.new');
+    Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
+    Route::delete('/video/new', 'VideoController@create')->name('video.new');
+
+    Route::post('/video/store', 'VideoController@store')->name('video.store');
+
+    Route::get('/video/edit/{id}', 'VideoController@edit')->name('video.edit');
+    Route::post('/video/update/{id}', 'VideoController@update')->name('video.update');
 });
 
 // VideoController制御
