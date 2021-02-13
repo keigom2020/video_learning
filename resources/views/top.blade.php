@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container" id="top">
+<div class="container pt-5" id="top">
 
   <div class="row">
     <h2 class="mx-auto heading__lv2">VideoLearning</h2>

@@ -1,4 +1,7 @@
 <!-- <nav class='navbar navbar-expand-md navbar-dark bg-dark fixed-top'> -->
+
+@auth
+
 <nav class="container pt-4">
   <ul class="row">
     <!-- <li class="mr-2">
@@ -29,3 +32,5 @@
     
   </ul>
 </nav>
+
+@endauth
