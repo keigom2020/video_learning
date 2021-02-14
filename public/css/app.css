@@ -10966,6 +10966,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #17a2b8;
 }
 
 button a {
@@ -11146,7 +11147,7 @@ html,
 }
 
 .footer {
-  background-color: #6574cd;
+  background-color: #17a2b8;
   color: #fff;
 }
 
@@ -11167,6 +11168,14 @@ html,
   display: flex;
   flex-direction: column;
   margin-left: auto;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #20c997;
 }
 
 @media screen and (max-width: 767px) {
