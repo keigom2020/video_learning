@@ -5,8 +5,9 @@ UIや画面遷移はUdemyやpaizaラーニングを参考にしています。
 動画はvimeoという動画サイトの動画をランダムで埋め込んでいます。
 
 ## URL
-[https://video-learning02.herokuapp.com/](https://video-learning02.herokuapp.com/)
+[https://video-learning02.herokuapp.com/top](https://video-learning02.herokuapp.com/top)
 ID, PWは「test@gmail.com」「testtest」です。
+「ゲストログイン」を使用した場合、そのままログインが可能です。
 
 ## 環境
 - php 7.3.25
@@ -20,14 +21,17 @@ ID, PWは「test@gmail.com」「testtest」です。
 
 ### npmのモジュールを有効にする
 >npm install
+
 >npm run dev
 
 ### ブラウザ上で表示
 >php artisan serve
+
 >npm run watch
 
 ## 機能一覧
 - ユーザー登録、ログイン機能
+- ゲストログイン機能
 - 動画閲覧機能
 
 # 
