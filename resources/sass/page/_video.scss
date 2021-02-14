@@ -44,6 +44,17 @@ body, html, .player, .fallback {
   height: auto !important;
 }
 
+.course-heading-wrapper {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.video-detail {
+  max-width: 700px;
+}
+
 
 @media screen and (max-width: 768px) {
   .iframe-wrapper {
@@ -59,6 +70,10 @@ body, html, .player, .fallback {
         padding: 1.4rem;
       }
     }
+  }
+
+  .btn-wrapper {
+    justify-content: center;
   }
 
 

@@ -11001,6 +11001,11 @@ img {
   font-size: 1.4rem;
 }
 
+.item__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   .for-pc {
     display: none;
@@ -11098,6 +11103,15 @@ html,
   height: auto !important;
 }
 
+.course-heading-wrapper .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.video-detail {
+  max-width: 700px;
+}
+
 @media screen and (max-width: 768px) {
   .iframe-wrapper {
     padding: 56.25% 0 0 0;
@@ -11110,6 +11124,10 @@ html,
 
   .playerlist li a {
     padding: 1.4rem;
+  }
+
+  .btn-wrapper {
+    justify-content: center;
   }
 }
 
@@ -11143,5 +11161,18 @@ html,
 
 .copyright {
   padding: 1rem 0;
+}
+
+.state-change-btn {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .state-change-btn {
+    margin-left: 0%;
+    margin: 0 auto;
+  }
 }
 

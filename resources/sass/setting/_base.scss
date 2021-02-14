@@ -61,6 +61,11 @@ img {
   font-size: 1.4rem;
 }
 
+.item__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   .for-pc {
     display: none;

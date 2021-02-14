@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container course-heading-wrapper">
   <div class="row">
     <h2 class="heading__lv2">{{ $video->id }}：{{ $video->title }}</h2>
     <!-- <p>{{ $message }}</p> -->
@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-md-4">
-      <h3 class="headin__lv3">コースの内容</h3>
+      <h3 class="heading__lv3 mt-3 mb-3">コースの内容</h3>
       <ul class="playerlist">
 
       @foreach($video_players as $video_player)
@@ -41,35 +41,44 @@
 
   </div>
 
-  <div class="row mt-4 ml-5">
-    <p>{{ $video->detail }}</p>
-  </div>
-  <div class="row ml-5">
-    <p>{{ $video->content }}</p>
-  </div>
-</div>
+  <div class="row video-detail">
 
-<div class="container">
-  <div class="row mt-5">
-    <div class="mr-4">
-      <a href="{{ route('courses') }}" class="btn btn-info">一覧に戻る</a>
+    <div class="">
+      <div class="mt-4 ml-5">
+        <p>{{ $video->detail }}</p>
+      </div>
+      <div class="ml-5">
+        <p>{{ $video->content }}</p>
+      </div>
     </div>
 
-    
-
-    @if($nextVideo)
-      <div class="">
-        <a href='{{ route("video.show", ["id" =>  $video->id+1]) }}' class="btn btn-info">次の動画へ</a>
-      </div>
-      @else
-      <div>
-        <p>この動画が最後です。</p>
-      </div>
-    @endif
-
+    <div class="btn btn-info state-change-btn">
+      <p>{{ Auth::user()->name }} </p>
+      <p>視聴済みにする</p>
+    </div>
 
   </div>
-</div>
+
+  <div class="container">
+    <div class="row mt-5 btn-wrapper">
+      <div class="mr-4">
+        <a href="{{ route('courses') }}" class="btn btn-info">一覧に戻る</a>
+      </div>
+
+
+      @if($nextVideo)
+        <div class="">
+          <a href='{{ route("video.show", ["id" =>  $video->id+1]) }}' class="btn btn-info">次の動画へ</a>
+        </div>
+        @else
+        <div>
+          <p>この動画が最後です。</p>
+        </div>
+      @endif
+
+
+    </div>
+  </div>
 
 <script src="{{ asset('/js/video.js') }}"></script>
 

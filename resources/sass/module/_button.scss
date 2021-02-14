@@ -1,0 +1,13 @@
+
+.state-change-btn {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .state-change-btn {
+    margin-left: 0%;
+    margin: 0 auto;
+  }
+}

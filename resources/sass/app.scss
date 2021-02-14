@@ -7,11 +7,16 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// 
 @import 'setting/base';
 @import 'page/top';
 @import 'page/video';
 @import 'page/course';
 
 @import 'layout/footer';
+
+// module
+@import 'module/button';
+
 
 
