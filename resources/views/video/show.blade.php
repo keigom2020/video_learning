@@ -41,7 +41,7 @@
 
   </div>
 
-  <div class="row video-detail">
+  <div class="row video-detail mt-4">
 
     <div class="">
       <div class="mt-4 ml-5">
