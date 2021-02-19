@@ -70,7 +70,7 @@
 
   </div>
 
-  <div class="row">
+  <div class="row btn-return">
     <a href="{{ route('courses') }}" class="btn btn-info">コース一覧に戻る</a>
   </div>
 
