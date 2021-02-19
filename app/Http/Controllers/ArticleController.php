@@ -51,6 +51,8 @@ class ArticleController extends Controller
         $message = '記事 ' . $id;
         $articles = Article::all();
         $article = Article::find($id);
+        // $article_players = Article::where('category_id', $article->category_id)->get();
+
         return view('article.show', ['message' => $message, 'articles' => $articles, 'article' => $article]);
     }
 
