@@ -4,7 +4,9 @@
 
 <div class="container">
   <div class="row">
-    <h2 class="heading__lv2">{{ $article->id }}：{{ $article->title }}</h2>
+    <h2 class="heading__lv2">
+      {{ $article->id }}：{{ $article->title }}
+    </h2>
     <p>{{ $message }}</p>
   </div>
   <div class="row">
