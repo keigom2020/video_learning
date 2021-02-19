@@ -29,7 +29,7 @@
 
         @else
 
-          <div class="nav-item dropdown">
+          <div class="nav-item text-center">
             ようこそ{{ Auth::user()->name }} さん
           </div>
 
@@ -39,7 +39,7 @@
 
 </div>
 
-<div class="top_bg"></div>
+<div class="top__bg"></div>
 
 
 
