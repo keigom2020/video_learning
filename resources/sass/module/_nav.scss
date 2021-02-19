@@ -1,8 +1,15 @@
 
 .nav {
-  // background-color: #fff;
 
-  // .item__list {
-  //   background-color: #fff;
-  // }
+  .item__list {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+
+    a {
+      color: $teal;
+      // text-shadow: #000000 1px 0 10px;
+      padding: 1rem 0.4rem;
+      display: block;
+    }
+  }
 }
