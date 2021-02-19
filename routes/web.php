@@ -53,6 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
     Route::get('/article/new', 'ArticleController@create')->name('article.new');
+    // Route::post('/article', 'ArticleController@store')->name('article.store');
 
     //
     Route::get('/', function() {
