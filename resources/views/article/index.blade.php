@@ -13,19 +13,30 @@
 @foreach ($articles as $article)
 
   <tr>
-    <td>
+    <td class="article__id">
       {{ $article->id }}:
     </td>
-    <td>
+    <td class="article__title">
       <a href='{{ route("article.show", ["id" =>  $article->id]) }}'>
         {{ $article->title }}
       </a>
     </td>
-    <td class="ml-3">
+
+    @can('system-only')
+    <td class="ml-3 article__btn">
+      <span>
         {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
             {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
         {{ Form::close() }}
+      </span>
+
+      <span>
+        {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
+            {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
+        {{ Form::close() }}
+      </span>
     </td>
+    @endcan
   </tr>
 
 @endforeach

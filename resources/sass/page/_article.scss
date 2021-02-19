@@ -2,3 +2,21 @@
 .article-column {
   align-items: center;
 }
+
+.article__id {
+  width: 5%;
+}
+
+.article__title {
+  width: 60%;
+
+  a {
+    font-size: 1.6rem;
+    word-break: break-all;
+  }
+}
+
+.article__btn {
+  width: 35%;
+  display: flex;
+}
