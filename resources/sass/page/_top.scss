@@ -17,7 +17,7 @@
 //    background-size: cover;
 // }
 
-.top_bg {
+.top__bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -26,6 +26,8 @@
   bottom: 0;
   left: 0;
   z-index: -1;
+  // background: blue;
+
   background-image: url(../img/bg_top.jpg);
   background-size: cover;
 }
