@@ -52,10 +52,9 @@
       </div>
     </div>
 
-    <!-- <div class="btn btn-info state-change-btn">
-      <p>{{ Auth::user()->name }} </p>
+    <div class="btn btn-info state-change-btn">
       <p>視聴済みにする</p>
-    </div> -->
+    </div>
 
   </div>
 
