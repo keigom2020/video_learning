@@ -15,12 +15,17 @@ class ArticlesTableSeeder extends Seeder
         //
         DB::table('Articles')->insert([
             [
-                "id" => 1,
+                "id" => 2,
                 "title" => "test_title",
                 "content" => "test_content",
             ],
             [
-                "id" => 2,
+                "id" => 3,
+                "title" => "test_title",
+                "content" => "test_content",
+            ],
+            [
+                "id" => 4,
                 "title" => "test_title",
                 "content" => "test_content",
             ],

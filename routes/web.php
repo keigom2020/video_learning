@@ -61,6 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/article', function() {
         return redirect('/articles');
     });
+    Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
 
 });
 
