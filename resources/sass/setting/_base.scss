@@ -51,12 +51,19 @@ img {
   align-items: center;
 }
 
+// utility class
 .for-pc {
   display: block;
 }
 .for-sp {
   display: none;
 }
+
+.flex-center {
+  justify-content: center;
+}
+
+// 
 
 .heading__lv3 {
   font-size: 1.4rem;
@@ -77,5 +84,9 @@ img {
 
   .heading__lv2 {
     font-size: 1.2rem;
+  }
+
+  .btn-return {
+    justify-content: center;
   }
 }
