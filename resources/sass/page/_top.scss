@@ -10,6 +10,15 @@
     // text-shadow: #FC0 1px 0 10px;
     text-shadow: #000 1px 0 10px;
   }
+
+  .btn {
+    max-width: 160px;
+    display: block;
+
+    a {
+      color: #fff;
+    }
+  }
 } 
 
 // main {

@@ -58,6 +58,11 @@
                         マイページ
                     </a>
                   </li>
+                  <li class="nav-item dropdown">
+                    <a class="for-sp" href={{ route('courses') }}>
+                        コース一覧
+                    </a>
+                  </li>
                   
               @endguest
           </ul>

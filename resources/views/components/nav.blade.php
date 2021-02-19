@@ -2,7 +2,7 @@
 
 @auth
 
-<nav class="container pt-4 nav">
+<nav class="container pt-4 nav for-pc">
   <ul class="item__list">
     <!-- <li class="mr-2">
       <a href={{ route('article.index') }}>記事一覧</a>

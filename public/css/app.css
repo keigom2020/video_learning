@@ -11044,6 +11044,15 @@ table tr td {
   text-shadow: #000 1px 0 10px;
 }
 
+#top .btn {
+  max-width: 160px;
+  display: block;
+}
+
+#top .btn a {
+  color: #fff;
+}
+
 .top__bg {
   position: absolute;
   width: 100%;
@@ -11232,5 +11241,11 @@ html,
   color: #4dc0b5;
   padding: 1rem 0.4rem;
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    padding-left: 15px;
+  }
 }
 

@@ -29,8 +29,12 @@
 
         @else
 
-          <div class="nav-item text-center">
+          <div class="text-center">
             ようこそ{{ Auth::user()->name }} さん
+          </div>
+
+          <div class="btn btn-info text-center mx-auto">
+            <a href={{ route('mypage') }} class="mx-auto">マイページへ</a>
           </div>
 
       @endguest
