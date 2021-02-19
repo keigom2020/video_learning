@@ -24,9 +24,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $message = 'NEW ARTICLE';
+        return view('new', ['message' => $message]);
     }
 
     /**
@@ -37,7 +38,13 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = new Article();
+
+        $article->content = 'Hello BBS';
+        // $article->user_name = 'user';
+        $article->title = 'sample_title';
+        $article->save();
+        return redirect('/articles');
     }
 
     /**
@@ -85,8 +92,10 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Request $request, $id, Article $article)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        return redirect('/articles');
     }
 }
