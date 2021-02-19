@@ -16,4 +16,12 @@
   </p>
 </div>
 
+<div class="container">
+  <h2>メニュー</h2>
+  
+  <div class="row">
+    <a href={{ route('courses') }}>コース一覧へ</a>
+  </div>
+</div>
+
 @endsection('content')
