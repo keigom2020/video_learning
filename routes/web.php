@@ -52,9 +52,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/articles', 'ArticleController@index')->name('article.index');
     Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
+    Route::get('/article/new', 'ArticleController@create')->name('article.new');
+
     //
     Route::get('/', function() {
         return redirect('/mypage');
+    });
+    Route::get('/article', function() {
+        return redirect('/articles');
     });
 
 });
