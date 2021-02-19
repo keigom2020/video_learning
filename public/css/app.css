@@ -11011,6 +11011,10 @@ img {
   flex-wrap: wrap;
 }
 
+table tr td {
+  padding: 0.6rem 0.4rem;
+}
+
 @media screen and (max-width: 768px) {
   .for-pc {
     display: none;
@@ -11156,6 +11160,10 @@ html,
   .chapter .card {
     width: 75%;
   }
+}
+
+.article-column {
+  align-items: center;
 }
 
 .footer {
