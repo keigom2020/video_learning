@@ -16,6 +16,10 @@ _index.md
 /public/mix-manifest.json
 /public/storage
 
+/public/css/**
+/public/js/**
+
+
 .DS_Store
 
 _memo/**
