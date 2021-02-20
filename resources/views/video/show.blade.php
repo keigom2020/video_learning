@@ -60,6 +60,11 @@
       <p>視聴済みにする</p>
     </div>
 
+    {{-- @if($browsing_history->state_button == 0) 
+      <p>視聴済みにする</p>
+      @else
+　　    <p>未視聴にする</p>
+    @endif --}}
 
 
   </div>

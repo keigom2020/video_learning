@@ -14,11 +14,10 @@ class BrowsingHistoryController extends Controller
      */
     public function index()
     {
-        $message = '動画で学習';
+        // $message = '動画で学習';
         $browsing_history = BrowsingHistory::all();
-        return view('video.show', ['message' => $message, 'browsing_history' => $browsing_history]);
-        // return view('video.show', ['browsing_history' => $browsing_history]);
-
+        // return view('video.show', ['message' => $message, 'browsing_history' => $browsing_history]);
+        return view('video.show', ['browsing_history' => $browsing_history]);
     }
 
     /**
