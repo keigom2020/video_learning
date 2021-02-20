@@ -1,6 +1,7 @@
+// 表示非表示のtoggleボタン
+let toggleBtn = document.querySelector('.btn-toggle')
+let playerList = document.querySelector('.playerlist')
 
-// let jsNone = document.querySelector('.js-none')
-
-// jsNone.addEventListener('click', () => {
-//   this.classList.toggle('')
-// })
+toggleBtn.addEventListener('click', () => {
+  playerList.classList.toggle('is-active')
+})

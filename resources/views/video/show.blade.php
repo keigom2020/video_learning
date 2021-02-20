@@ -24,11 +24,15 @@
     </div>
 
     <div class="col-md-4">
-      <h3 class="heading__lv3 mt-3 mb-3">コースの内容</h3>
+      <div class="row playerlist__heading">
+        <h3 class="heading__lv3 mt-3 mb-3">コースの内容</h3>
+        <button class="btn btn-info for-sp btn-toggle">プレイヤーリストを開く</button>
+      </div>
+
       <ul class="playerlist">
 
       @foreach($video_players as $video_player)
-        <li>
+        <li class="">
           <a href='{{ route("video.show", ["id" =>  $video_player->id]) }}' class="" id='{{ $video_player->id }}'>
             {{ $video_player->id }}:
             {{ $video_player->title }}
@@ -55,6 +59,8 @@
     <div class="btn btn-info state-change-btn">
       <p>視聴済みにする</p>
     </div>
+
+
 
   </div>
 
