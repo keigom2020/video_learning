@@ -16,6 +16,9 @@
   position: relative;
 }
 
+.playerlist__heading {
+    
+}
 
 .playerlist {
   height: 362px;
@@ -38,6 +41,8 @@
       }
     }
   }
+
+  
 }
 
 body, html, .player, .fallback {
@@ -62,8 +67,19 @@ body, html, .player, .fallback {
     position: relative;
   }
 
+  .playerlist__heading {
+    margin: 2rem 0;
+    justify-content: space-between;
+  }
+
   .playerlist {
+    display: none;
     height: 200px;
+
+    &.is-active {
+      display: block !important;
+      animation: show 1s linear 0s;
+    }
 
     li {
       a {
@@ -71,6 +87,17 @@ body, html, .player, .fallback {
       }
     }
   }
+
+  @keyframes show{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  
 
   .btn-wrapper {
     justify-content: center;

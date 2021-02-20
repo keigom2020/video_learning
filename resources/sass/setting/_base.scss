@@ -82,9 +82,10 @@ table {
   }
 }
 
-.js-none {
-  display: none;
+.is-active {
+  display: block;
 }
+
 
 @media screen and (max-width: 768px) {
   .for-pc {
