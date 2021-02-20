@@ -10,7 +10,7 @@
 
         <div class="row mt-4">
 
-          <div class="col-sm-12 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card shadow-sm">
               <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
               <img src="../../img/thumb_insurance.jpg" alt="">
@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <div class="col-sm-12 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card shadow-sm">
               <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
               <img src="../../img/thumb_realestate.jpeg" alt="">
@@ -34,7 +34,7 @@
             </div>
           </div>
 
-          <div class="col-sm-12 col-xl-3">
+          <div class="col-sm-4 col-xl-3">
             <div class="card shadow-sm">
               <!-- <img src="https://placehold.jp/264x180.png" alt=""> -->
               <img src="../../img/thumb_stock.jpg" alt="">
