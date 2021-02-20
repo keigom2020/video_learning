@@ -21,6 +21,7 @@
       </div>
 
       <script src="/js/app.js"></script>
+      <script src="/js/ui.js"></script>
       <script src="https://player.vimeo.com/api/player.js"></script>
     </body>
 </html>
