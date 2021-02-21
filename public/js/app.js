@@ -1922,6 +1922,11 @@ module.exports = {
 //
 //
 //
+//
+//
+//
+//
+//
 
 /***/ }),
 
@@ -37536,8 +37541,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "btn btn-info state-change-btn" }, [
-      _c("p", [_vm._v("視聴済みにする")])
+    return _c("div", { staticClass: "mx-auto" }, [
+      _c("div", { staticClass: "btn btn-info state-change-btn" }, [
+        _c("p", [_vm._v("視聴済みにする")])
+      ])
     ])
   }
 ]
