@@ -33,8 +33,8 @@
             ようこそ{{ Auth::user()->name }} さん
           </div>
 
-          <div class="btn btn-info text-center mx-auto">
-            <a href={{ route('mypage') }} class="mx-auto">マイページへ</a>
+          <div class="text-center mx-auto">
+            <a href={{ route('mypage') }} class="mx-auto btn btn-info">マイページへ</a>
           </div>
 
       @endguest
