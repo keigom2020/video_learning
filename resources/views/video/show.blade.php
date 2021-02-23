@@ -56,17 +56,20 @@
       </div>
     </div>
 
-    {{-- 
-    <div class="btn btn-info state-change-btn">
-      <p>視聴済みにする</p>
-    </div>
-    --}}
-
-    {{-- @if($browsing_history->state_button == 0) 
+    {{-- @if($browsing_histories->state_button == 0) 
       <p>視聴済みにする</p>
       @else
 　　    <p>未視聴にする</p>
     @endif --}}
+
+    <div class="btn btn-info state-change-btn">
+      <p>視聴済みにする</p>
+    </div>
+    @if($browsing_histories->state_button == 0) 
+      <p>視聴済みにする</p>
+      @else
+　　    <p>未視聴にする</p>
+    @endif
 
     <browsing-history></browsing-history>
 
