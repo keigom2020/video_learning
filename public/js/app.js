@@ -1927,6 +1927,21 @@ module.exports = {
 //
 //
 //
+//
+//
+// export default {
+//   name: 'BrowsingHistory',
+//   data() {
+//     return {
+//       isActive: false,
+//     }
+//   },
+//   methods: {
+//     toggleButton() {
+//       this.isActive = !this.isActive;
+//     }
+//   },
+// }
 
 /***/ }),
 

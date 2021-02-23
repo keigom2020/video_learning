@@ -12,7 +12,9 @@
     </button>
     10 -->
 
-    <div class="btn btn-info state-change-btn">
+    <div
+      class="btn btn-info state-change-btn"
+    >
       <p>視聴済みにする</p>
     </div>
   </div>
@@ -20,7 +22,19 @@
 </template>
 
 <script>
-
+// export default {
+//   name: 'BrowsingHistory',
+//   data() {
+//     return {
+//       isActive: false,
+//     }
+//   },
+//   methods: {
+//     toggleButton() {
+//       this.isActive = !this.isActive;
+//     }
+//   },
+// }
 </script>
 
 <style>
