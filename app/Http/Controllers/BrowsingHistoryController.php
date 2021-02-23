@@ -15,11 +15,10 @@ class BrowsingHistoryController extends Controller
     public function index()
     {
         // $message = '動画履歴';
-        // $videos = Video::all();
         $browsing_histories = BrowsingHistory::all();
+        return view('video.show', ['browsing_histories' => $browsing_histories]);
         // return view('video.show', ['message' => $message, 'browsing_histories' => $browsing_histories]);
-        // return view('video.show', ['browsing_histories' => $browsing_histories]);
-        return view('browsing_histories.index', ['browsing_histories' => $browsing_histories]);
+        // return view('browsing_histories.index', ['browsing_histories' => $browsing_histories]);
         // return view('browsing_histories.index', ['message' => $message, 'browsing_histories' => $browsing_histories]);
     }
 
