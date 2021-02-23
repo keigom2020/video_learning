@@ -71,8 +71,14 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
     Route::post('/video/update/{id}', 'VideoController@update')->name('video.update');
 });
 
+// BrowsingHistory
+// Route::get('/video/{id}', 'BrowsingHistoryController@index');
+
 // VideoController制御
 Route::get('/video/{id}', 'VideoController@show')->name('video.show');
+
+
+
 
 // 保険の動画ページ
 Route::get('/video/1', 'VideoController@show')->name('video.insurance.primary');
