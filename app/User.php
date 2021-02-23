@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 動画とユーザーの関係は多対多のはず
+    public function videos()
+    {
+        // return $this->hasMany(Video::class);
+        return $this->belongsToMany(Video::class);
+    }
 }

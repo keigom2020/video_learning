@@ -10,4 +10,10 @@ class Video extends Model
     public static function nextVideo($id) {
         return Video::where('id', $id)->count();
     }
+
+    // 動画とユーザーの関係は多対多のはず
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
