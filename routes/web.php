@@ -35,18 +35,10 @@ Route::group(['middleware' => ['auth']], function () {
         return view('course.realestate.index');
     })->name('realestate');
 
-    // Route::get('/course/realestate/primary', function () {
-    //     return view('course.realestate.primary');
-    // })->name('realestate.primary');
-
     // 証券投資コース
     Route::get('/course/stock', function () {
         return view('course.stock.index');
     })->name('stock');
-
-    // Route::get('/course/stock/primary', function () {
-    //     return view('course.stock.primary');
-    // })->name('stock.primary');
 
     // 記事一覧を表示
     Route::get('/articles', 'ArticleController@index')->name('article.index');
