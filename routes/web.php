@@ -56,6 +56,14 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
 
+
+    // 視聴履歴一覧ページ
+    // Route::get('/browsing_histories', function () {
+    //     return view('browsing_histories.index');
+    // })->name('browsing_histories');
+
+    Route::get('/browsing_histories', 'BrowsingHistoryController@index')->name('browsing_history.index');
+
 });
 
 // システム管理者のみ
