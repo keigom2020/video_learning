@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             {{ Form::submit('作成する', ['class' => 'btn btn-primary']) }}
-            <a href={{ route('article.list') }}>一覧に戻る</a>
+            <a href={{ route('article.index') }}>一覧に戻る</a>
         </div>
     {{ Form::close() }}
 @endsection
