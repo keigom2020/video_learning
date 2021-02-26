@@ -46,16 +46,17 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/article/new', 'ArticleController@create')->name('article.new');
     // Route::post('/article', 'ArticleController@store')->name('article.store');
+    
+    Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
 
-    //
-    Route::get('/', function() {
-        return redirect('/mypage');
-    });
+    // /articleにアクセスしてきたら/articles にリダイレクトさせる
     Route::get('/article', function() {
         return redirect('/articles');
     });
-    Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
-
+    // /mypageにリダイレクト
+    Route::get('/', function() {
+        return redirect('/mypage');
+    });
 
     // 視聴履歴一覧ページ
     // Route::get('/browsing_histories', function () {
@@ -75,7 +76,7 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
     Route::get('/videos', 'VideoController@index')->name('video.index');
     Route::get('/video/new', 'VideoController@create')->name('video.new');
     Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
-    Route::delete('/video/new', 'VideoController@create')->name('video.new');
+    // Route::delete('/video/new', 'VideoController@create')->name('video.new');
 
     Route::post('/video/store', 'VideoController@store')->name('video.store');
 
