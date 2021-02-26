@@ -62,8 +62,12 @@ Route::group(['middleware' => ['auth']], function () {
     //     return view('browsing_histories.index');
     // })->name('browsing_histories');
 
+    // 視聴履歴　状態変更メソッド
     Route::get('/browsing_histories', 'BrowsingHistoryController@index')->name('browsing_history.index');
 
+    // VideoController制御
+    Route::get('/video/{id}', 'VideoController@show')->name('video.show');
+    Route::post('/video/{id}/button_state', 'VideoController@toggleButtonState')->name('video.toggle-button-state');
 });
 
 // システム管理者のみ
@@ -81,11 +85,6 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
 
 // BrowsingHistory
 // Route::get('/video/{id}', 'BrowsingHistoryController@index');
-
-// VideoController制御
-Route::get('/video/{id}', 'VideoController@show')->name('video.show');
-
-
 
 
 // 保険の動画ページ
