@@ -43,13 +43,10 @@
 </table>
 </div>
 
-
 <div class="container">
   <div>
     <a href={{ route('article.new') }}>新規投稿</a>
   </div>
 </div>
-
-<router-view />
 
 @endsection
