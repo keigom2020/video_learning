@@ -45,6 +45,17 @@ export default {
       axios.post('/api/video/' + id,video).then(res => {
         console.log(res.data.state_button);
       });
+
+      // axios.post('/tweet', {
+      //   tweet: this.tweet
+      // })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
+      // https://kumatetsublog.com/shoot/blog/laravel-ajax-vue-axios
     }
   },
 }
