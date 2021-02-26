@@ -26,7 +26,19 @@ class BrowsingHistoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 3,
+                'video_id' => 3,
+                'user_id' => 2,
+                'state_button' => true,
+            ],
+            [
+                'id' => 4,
                 'video_id' => 1,
+                'user_id' => 2,
+                'state_button' => true,
+            ],
+            [
+                'id' => 5,
+                'video_id' => 4,
                 'user_id' => 2,
                 'state_button' => true,
             ],
