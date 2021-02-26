@@ -16,9 +16,9 @@ class BrowsingHistoryController extends Controller
     {
         // $message = '動画履歴';
         $browsing_histories = BrowsingHistory::all();
-        return view('video.show', ['browsing_histories' => $browsing_histories]);
+        // return view('video.show', ['browsing_histories' => $browsing_histories]);
         // return view('video.show', ['message' => $message, 'browsing_histories' => $browsing_histories]);
-        // return view('browsing_histories.index', ['browsing_histories' => $browsing_histories]);
+        return view('browsing_histories.index', ['browsing_histories' => $browsing_histories]);
         // return view('browsing_histories.index', ['message' => $message, 'browsing_histories' => $browsing_histories]);
     }
 
@@ -28,7 +28,7 @@ class BrowsingHistoryController extends Controller
         // $comments = Comment::orderBy('created_at', 'desc')->get();
         // $json = ["comments" => $comments];
         // return response()->json($json);
-        
+
     }
 
     /**
@@ -49,7 +49,14 @@ class BrowsingHistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $user = Auth::user();
+        // $browsing_history = new BrowsingHistory();
+        // $browsing_history->user_id = $user->id;
+        // $browsing_history->nickname = $user->name;
+        // $browsing_history->tweet = $request->tweet;
+        // $browsing_history->save();
+
+        // return $tweet;
     }
 
     /**
