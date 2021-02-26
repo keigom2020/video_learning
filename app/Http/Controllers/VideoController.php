@@ -16,7 +16,10 @@ class VideoController extends Controller
     {
         $message = '動画で学習';
         $videos = Video::all();
-        return view('video.index', ['message' => $message, 'videos' => $videos]);
+        return view('video.index', [
+            'message' => $message, 
+            'videos' => $videos
+        ]);
     }
 
     /**
@@ -69,7 +72,13 @@ class VideoController extends Controller
         // もしくはmodel next_video_idみたいな
         $nextVideo = Video::nextVideo($id+1);
         $video_players = video::where('category_id', $video->category_id)->get();
-        return view('video.show', ['nextVideo' => $nextVideo, 'message' => $message, 'videos' => $videos, 'video' => $video, 'video_players' => $video_players]);
+        return view('video.show', [
+            'nextVideo' => $nextVideo, 
+            'message' => $message, 
+            'videos' => $videos, 
+            'video' => $video, 
+            'video_players' => $video_players
+        ]);
     }
 
     /**
@@ -82,7 +91,10 @@ class VideoController extends Controller
     {
         $message = 'Edit your Video ' . $id;
         $video = Video::find($id);
-        return view('show', ['message' => $message, 'video' => $video]);
+        return view('show', [
+            'message' => $message, 
+            'video' => $video
+        ]);
     }
 
     /**
