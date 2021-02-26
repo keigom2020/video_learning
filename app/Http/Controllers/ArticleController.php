@@ -27,7 +27,17 @@ class ArticleController extends Controller
     public function create(Request $request)
     {
         $message = 'NEW ARTICLE';
-        return view('new', ['message' => $message]);
+        // return view('article.new', ['message' => $message]);
+
+        // $article = new Article();
+
+        // $article->content = 'Hello BBS';
+        // $article->user_name = 'paiza';
+        // $article->save();
+        // return redirect('/articles');
+        // return view('article.new', ['message' => $message, 'articles' => $articles]);
+        return view('article.new', ['message' => $message]);
+
     }
 
     /**
@@ -60,7 +70,11 @@ class ArticleController extends Controller
         $article = Article::find($id);
         // $article_players = Article::where('category_id', $article->category_id)->get();
 
-        return view('article.show', ['message' => $message, 'articles' => $articles, 'article' => $article]);
+        return view('article.show', [
+            'message' => $message, 
+            'articles' => $articles, 
+            'article' => $article
+        ]);
     }
 
     /**
