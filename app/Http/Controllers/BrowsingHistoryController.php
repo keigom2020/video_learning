@@ -22,6 +22,15 @@ class BrowsingHistoryController extends Controller
         // return view('browsing_histories.index', ['message' => $message, 'browsing_histories' => $browsing_histories]);
     }
 
+    public function toggleButtonState() 
+    {
+        // 非同期通信実装の一例
+        // $comments = Comment::orderBy('created_at', 'desc')->get();
+        // $json = ["comments" => $comments];
+        // return response()->json($json);
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *
