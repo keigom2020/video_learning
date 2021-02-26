@@ -62,6 +62,8 @@
 　　    <p>未視聴にする</p>
     @endif --}}
 
+    {{-- 
+    
     <div class="btn btn-info state-change-btn">
       <p>視聴済みにする</p>
     </div>
@@ -71,8 +73,9 @@
 　　    <p>未視聴にする</p>
     @endif
 
-    <browsing-history></browsing-history>
+    --}}
 
+    <browsing-history></browsing-history>
 
   </div>
 

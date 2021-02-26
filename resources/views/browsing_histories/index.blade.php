@@ -49,12 +49,13 @@
 
 @endforeach
 
+{{--
 <div class="container">
   <div>
     <a href={{ route('video.new') }}>新規投稿</a>
   </div>
 </div>
-
+--}}
 
 @endcan
 
