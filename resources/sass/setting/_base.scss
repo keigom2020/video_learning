@@ -78,6 +78,14 @@ img {
   flex-wrap: wrap;
 }
 
+.container {
+  tr {
+    &:nth-child(2n+1) {
+      background-color: #eee;
+    }
+  }
+}
+
 table {
   tr {
     td {

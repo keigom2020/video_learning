@@ -11015,6 +11015,10 @@ img {
   flex-wrap: wrap;
 }
 
+.container tr:nth-child(2n+1) {
+  background-color: #eee;
+}
+
 table tr td {
   padding: 0.6rem 0.4rem;
 }
@@ -11220,7 +11224,7 @@ html,
 }
 
 .article__title {
-  width: 60%;
+  width: 80%;
 }
 
 .article__title a {
@@ -11229,7 +11233,7 @@ html,
 }
 
 .article__btn {
-  width: 35%;
+  width: 15%;
   display: flex;
 }
 
