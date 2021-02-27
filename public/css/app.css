@@ -10959,6 +10959,10 @@ main {
   padding-bottom: 4rem;
 }
 
+.container {
+  word-break: break-all;
+}
+
 ol,
 ul {
   list-style-type: none;
