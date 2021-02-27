@@ -4,12 +4,20 @@
 
 <div class="container course-heading-wrapper">
   <div class="row">
-    <h2 class="heading__lv2">{{ $video->id }}：{{ $video->title }}</h2>
-    <p>{{ $message }}</p>
+    <h2 class="heading__lv2">
+      {{ $video->id }}：{{ $video->title }}
+
+      @can('system-only')
+      <a href={{ route('video.edit', ["id" =>  $video->id]) }} class='btn btn-info'>編集</a>
+      @endcan
+      
+    </h2>
+    {{-- <p>{{ $message }}</p> --}}
   </div>
   <div class="row">
     <p>講師：{{ $video->author }}</p>
   </div>
+
 </div>
 
 <div class="container area-video">
@@ -98,6 +106,7 @@
 
 
     </div>
+
   </div>
 
 {{--<script src="{{ asset('/js/video.js') }}"></script>--}}
