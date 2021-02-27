@@ -21,8 +21,10 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
 
     Route::post('/video/store', 'VideoController@store')->name('video.store');
 
+    // 動画の編集・更新
     Route::get('/video/edit/{id}', 'VideoController@edit')->name('video.edit');
     Route::post('/video/update/{id}', 'VideoController@update')->name('video.update');
+
 });
 
 //ミドルウェアでのグループ化
@@ -93,6 +95,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 // BrowsingHistory
 // Route::get('/video/{id}', 'BrowsingHistoryController@index');
+
 
 
 // 保険の動画ページ

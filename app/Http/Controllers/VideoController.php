@@ -86,11 +86,11 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Video $video)
+    public function edit(Request $request, $id, Video $video)
     {
-        $message = 'Edit your Video ' . $id;
+        $message = '動画を編集 ' . $id;
         $video = Video::find($id);
-        return view('show', [
+        return view('video.edit', [
             'message' => $message, 
             'video' => $video
         ]);
@@ -103,9 +103,14 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Video $video)
+    public function update(Request $request, Video $video, $id)
     {
-        //
+        $video = Video::find($id);
+
+        $video->title = $request->title;
+        $video->content = $request->content;
+        $video->save();
+        return redirect()->route('video.show', ['id' => $video->id]);
     }
 
     /**
