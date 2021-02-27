@@ -17,7 +17,7 @@
         </div>
         
         <div class="form-group">
-            {{ Form::submit('保存する', ['class' => 'btn btn-primary']) }}
+            {{ Form::submit('保存する', ['class' => 'btn btn-info']) }}
             <a href={{ route('article.show', ['id' => $article->id]) }}>戻る</a>
         </div>
     {{ Form::close() }}

@@ -43,7 +43,7 @@
         </div>
         
         <div class="form-group">
-            {{ Form::submit('保存する', ['class' => 'btn btn-primary']) }}
+            {{ Form::submit('保存する', ['class' => 'btn btn-info']) }}
             <a href="{{ route('video.show', ['id' => $video->id]) }}"　class="btn btn-info">動画に戻る</a>
         </div>
     {{ Form::close() }}
