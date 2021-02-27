@@ -1,18 +1,20 @@
 @extends('layout')
 
 @section('content')
-    <h1>paiza bbs</h1>
+
+<div class="container">
+
+    <h1>新規投稿</h1>
     <p>{{ $message }}</p>
     {{ Form::open(['route' => 'article.store']) }}
         <div class='form-group'>
-            {{ Form::label('user_name', 'Title:') }}
+            {{ Form::label('user_name', 'タイトル:') }}
             {{ Form::text('title') }}
             {{-- {{ Form::text('title', null) }} --}}
         </div>
         <div class='form-group'>
-            {{ Form::label('content', 'Content:') }}
-            {{ Form::text('content') }}
-            {{-- {{ Form::text('content', null) }} --}}
+            {{ Form::label('content', '内容:') }}
+             {{ Form::text('content', null) }}
         </div>
         
         <div class="form-group">
@@ -20,4 +22,7 @@
             <a href={{ route('article.index') }}>一覧に戻る</a>
         </div>
     {{ Form::close() }}
+
+</div>
+
 @endsection
