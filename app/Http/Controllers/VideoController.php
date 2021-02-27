@@ -31,7 +31,7 @@ class VideoController extends Controller
     // public function create(Request $request)
     public function create()
     {
-        $message = 'New Video';
+        $message = '新しい動画';
         return view('video.new', ['message' => $message]);
     }
 

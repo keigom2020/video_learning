@@ -29,7 +29,7 @@ class ArticleController extends Controller
      */
     public function create(Request $request)
     {
-        $message = 'New article';
+        $message = '新しい記事';
         return view('article.new', ['message' => $message]);
     }
 
