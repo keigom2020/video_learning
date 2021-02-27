@@ -45,8 +45,6 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->content = $request->content;
         $article->save();
-        // return redirect('/articles');
-        // return redirect('/article.show', ['id' => $article->id]);
         return redirect()->route('article.index', ['id' => $article->id]);
     }
 
