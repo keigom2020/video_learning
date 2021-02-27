@@ -37,7 +37,7 @@
       <a href={{ route('video.index') }}>動画一覧・編集画面</a>
     </li>
     <li class="mr-2">
-      <a href={{ route('article.index') }}>記事一覧・編集画面</a>
+      <a href={{ route('article.index') }}>記事一覧画面</a>
     </li>
     @endcan
     
