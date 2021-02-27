@@ -7,6 +7,11 @@
   <p>{{ $message }}</p>
 </div>
 
+<div class="container">
+  <div>
+    <a href={{ route('article.new') }} class="btn btn-info">新規投稿</a>
+  </div>
+</div>
 
 <div class="container">
 <table>
@@ -23,6 +28,7 @@
     </td>
 
     @can('system-only')
+
     <td class="ml-3 article__btn">
       <span>
         {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
@@ -36,7 +42,9 @@
         {{ Form::close() }}
       </span>
     </td>
+
     @endcan
+
   </tr>
 
 @endforeach
@@ -45,7 +53,7 @@
 
 <div class="container">
   <div>
-    <a href={{ route('article.new') }}>新規投稿</a>
+    <a href={{ route('article.new') }} class="btn btn-info">新規投稿</a>
   </div>
 </div>
 

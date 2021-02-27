@@ -10,6 +10,12 @@
 @can('system-only')
 
 <div class="container">
+  <div>
+    <a href={{ route('video.new') }} class="btn btn-info">新規投稿</a>
+  </div>
+</div>
+
+<div class="container">
 
 <table>
 @foreach ($videos as $video)
@@ -47,7 +53,7 @@
 
 <div class="container">
   <div>
-    <a href={{ route('video.new') }}>新規投稿</a>
+    <a href={{ route('video.new') }} class="btn btn-info">新規投稿</a>
   </div>
 </div>
 
