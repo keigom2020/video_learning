@@ -71,7 +71,7 @@
     @endif --}}
 
     {{-- 
-    
+
     <div class="btn btn-info state-change-btn">
       <p>視聴済みにする</p>
     </div>
@@ -83,7 +83,33 @@
 
     --}}
 
+    <div class="mx-auto">
+
+    <form action="/video/update_browsing_history/{{ $video->id }}" method="post">
+    @csrf
+
+      <button
+        class="btn btn-info state-change-btn"
+      >
+
+      @if(!empty($browsing_history) && $browsing_history->state_button == 1)
+        <p>未視聴に戻す</p>
+      @else
+        <p>視聴済みにする</p>
+      @endif
+
+      </button>
+
+    </form>
+    
+  </div>
+
+  {{-- 
+
     <browsing-history></browsing-history>
+
+  }}
+
 
   </div>
 
