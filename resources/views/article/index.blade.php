@@ -7,11 +7,15 @@
   <p>{{ $message }}</p>
 </div>
 
+@can('system-only')
+
 <div class="container">
   <div>
     <a href={{ route('article.new') }} class="btn btn-info">新規投稿</a>
   </div>
 </div>
+
+@endcan
 
 <div class="container">
 <table>
@@ -51,10 +55,15 @@
 </table>
 </div>
 
+@can('system-only')
+
 <div class="container">
   <div>
     <a href={{ route('article.new') }} class="btn btn-info">新規投稿</a>
   </div>
 </div>
+
+@endcan
+
 
 @endsection
