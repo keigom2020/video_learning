@@ -44,16 +44,13 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $video = new Video();
-
-        $video->id = '0.';
-        $video->category_id = '1';
-        $video->title = '導入';
-        $video->detail = 'サンプル動画タイトルです。';
-        $video->content = 'サンプル動画のテキスト文です。';
-        $video->author = '田中太郎';
-        $video->video_url = 391525572;
-        $video->image_src = '';
-        
+        $video->title = $request->title;
+        $video->video_url = $request->video_url;
+        $video->detail = $request->detail;
+        $video->author = $request->author;
+        $video->category_id = $request->category_id;
+        $video->image_src = $request->image_src;
+        $video->content = $request->content;
         $video->save();
         return redirect()->route('video.index', ['id' => $video->id]);
     }
@@ -72,10 +69,10 @@ class VideoController extends Controller
         // $videoがnullなら404表示にする　短い記述で住むならコントローラでの記述でもOK
         // この記述だとコントローラ側に書くしかない if文
         // もしくはmodel next_video_idみたいな
-        // $nextVideo = Video::nextVideo($id+1);
+        $nextVideo = Video::nextVideo($id+1);
         $video_players = video::where('category_id', $video->category_id)->get();
         return view('video.show', [
-            // 'nextVideo' => $nextVideo, 
+            'nextVideo' => $nextVideo, 
             'message' => $message, 
             'videos' => $videos, 
             'video' => $video, 
