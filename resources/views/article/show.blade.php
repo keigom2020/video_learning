@@ -7,10 +7,9 @@
     <h2 class="heading__lv2">
       {{ $article->id }}：{{ $article->title }}
     </h2>
-    {{-- <p>{{ $message }}</p> --}}
   </div>
   <div class="row">
-
+    <p>{{ $article->updated_at }}</p>
   </div>
 </div>
 
