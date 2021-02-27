@@ -5,7 +5,7 @@
 <div class="container course-heading-wrapper">
   <div class="row">
     <h2 class="heading__lv2">{{ $video->id }}：{{ $video->title }}</h2>
-    <!-- <p>{{ $message }}</p> -->
+    <p>{{ $message }}</p>
   </div>
   <div class="row">
     <p>講師：{{ $video->author }}</p>

@@ -18,7 +18,8 @@ class ArticleController extends Controller
         $articles = Article::all();
         return view('article.index', [
             'message' => $message, 
-            'articles' => $articles
+            'articles' => $articles,
+            // 'updated_at' => $updated_at
         ]);
     }
 
@@ -44,6 +45,7 @@ class ArticleController extends Controller
         $article = new Article();
         $article->title = $request->title;
         $article->content = $request->content;
+        // $article->updated_at = $request->updated_at;
         $article->save();
         return redirect()->route('article.index', ['id' => $article->id]);
     }
@@ -56,15 +58,16 @@ class ArticleController extends Controller
      */
     public function show(Request $request, $id, Article $article)
     {
-        $message = '記事 ' . $id;
+        // $message = '記事 ' . $id;
         $articles = Article::all();
         $article = Article::find($id);
         // $article_players = Article::where('category_id', $article->category_id)->get();
 
         return view('article.show', [
-            'message' => $message, 
+            // 'message' => $message, 
             'articles' => $articles, 
-            'article' => $article
+            'article' => $article,
+            // 'updated_at' => $updated_at
         ]);
     }
 

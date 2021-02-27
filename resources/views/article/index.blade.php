@@ -4,7 +4,7 @@
 
 <div class="container">
   <h2>記事</h2>
-  <p>{{ $message }}</p>
+  {{-- <p>{{ $message }}</p> --}}
 </div>
 
 @can('system-only')
@@ -17,7 +17,7 @@
 
 @endcan
 
-<div class="container">
+<div class="container mt-4 mb-4">
 <table>
 @foreach ($articles as $article)
 
@@ -29,6 +29,8 @@
       <a href='{{ route("article.show", ["id" =>  $article->id]) }}'>
         {{ $article->title }}
       </a>
+      <br>
+      <span>{{ $article->updated_at }}</span>
     </td>
 
     @can('system-only')
