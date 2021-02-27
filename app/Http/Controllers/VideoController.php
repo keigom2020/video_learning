@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Video;
+use App\BrowsingHistory;
+use Auth;
+
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
@@ -21,6 +24,24 @@ class VideoController extends Controller
             'videos' => $videos
         ]);
     }
+
+    public function updateBrowsingHistory(Request $request, $id) 
+    {
+        $browsing_history = BrowsingHistory::where('video_id', $id)->where('user_id', Auth::id())->first();
+
+        if (empty($browsing_history)) {
+            $browsing_history = new BrowsingHistory;
+            $browsing_history->user_id = Auth::id();
+            $browsing_history->video_id = $id;
+        }
+
+        $browsing_history->state_button = $browsing_history->state_button == 1 ? 0 : 1; //if文で描いてもいい　三項演算子で調べる
+        $browsing_history->save();
+        // return redirect()->route('video.show', ['id' => $video->id]);
+        return redirect()->route('video.show', ['id' => $id]);
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -63,6 +84,8 @@ class VideoController extends Controller
      */
     public function show(Request $request, $id, Video $video)
     {
+        $browsing_history = BrowsingHistory::where('video_id', $id)->where('user_id', Auth::id())->first();
+
         $message = '動画 ' . $id;
         $videos = Video::all();
         $video = Video::find($id);
@@ -75,7 +98,8 @@ class VideoController extends Controller
             'nextVideo' => $nextVideo, 
             'message' => $message, 
             'videos' => $videos, 
-            'video' => $video, 
+            'video' => $video,
+            'browsing_history' => $browsing_history,
             'video_players' => $video_players
         ]);
     }
