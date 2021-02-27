@@ -9,30 +9,45 @@
 
 @can('system-only')
 
+<div class="container">
+
+<table>
 @foreach ($videos as $video)
   
-  <div class="container">
-    <p>
+  
 
+    
+
+  <tr>
+    <td class="article__id">
+      {{ $video->id }}:
+    </td>
+    <td class="article__title">
       <a href='{{ route("video.show", ["id" =>  $video->id]) }}'>
-        {{ $video->id }}:
         {{ $video->title }}
       </a>
+    </td>
 
-{{--
-    <a href={{ route('video.delete') }}>削除</a>
-  --}}
+    @can('system-only')
+    <td class="ml-3 article__btn">
+      <span>
+        {{ Form::open(['method' => 'delete', 'route' => ['video.delete', $video->id]]) }}
+            {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
+        {{ Form::close() }}
+      </span>
 
-    <span>
-      {{ Form::open(['method' => 'delete', 'route' => ['video.delete', $video->id]]) }}
-          {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
-      {{ Form::close() }}
-    </span>
-
-    </p>
-  </div>
+      <span>
+        {{ Form::open(['method' => 'delete', 'route' => ['video.delete', $video->id]]) }}
+            {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
+        {{ Form::close() }}
+      </span>
+    </td>
+    @endcan
+  </tr>
 
 @endforeach
+</table>
+</div>
 
 <div class="container">
   <div>
