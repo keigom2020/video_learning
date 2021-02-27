@@ -15,12 +15,16 @@
   </div>
 </div>
 
+<div class="container mt-4 mb-4">
+  <a href="#51">動画ID：51〜</a>
+</div>
+
 <div class="container">
 
 <table>
 @foreach ($videos as $video)
 
-  <tr>
+  <tr id='{{ $video->id }}'>
     <td class="article__id">
       {{ $video->id }}:
     </td>
@@ -45,12 +49,16 @@
         {{ Form::close() }}
       </span>
     </td>
-    
+
     @endcan
   </tr>
 
 @endforeach
 </table>
+</div>
+
+<div class="container mt-4 mb-4">
+  <a href="#1">動画ID：1〜</a>
 </div>
 
 <div class="container">

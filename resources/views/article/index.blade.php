@@ -21,7 +21,7 @@
 <table>
 @foreach ($articles as $article)
 
-  <tr>
+  <tr id='{{ $article->id }}'>
     <td class="article__id">
       {{ $article->id }}:
     </td>
