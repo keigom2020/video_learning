@@ -55,7 +55,7 @@ class VideoController extends Controller
         $video->image_src = '';
         
         $video->save();
-        return redirect('/videos');
+        return redirect()->route('video.index', ['id' => $video->id]);
     }
 
     /**
@@ -72,10 +72,10 @@ class VideoController extends Controller
         // $videoがnullなら404表示にする　短い記述で住むならコントローラでの記述でもOK
         // この記述だとコントローラ側に書くしかない if文
         // もしくはmodel next_video_idみたいな
-        $nextVideo = Video::nextVideo($id+1);
+        // $nextVideo = Video::nextVideo($id+1);
         $video_players = video::where('category_id', $video->category_id)->get();
         return view('video.show', [
-            'nextVideo' => $nextVideo, 
+            // 'nextVideo' => $nextVideo, 
             'message' => $message, 
             'videos' => $videos, 
             'video' => $video, 

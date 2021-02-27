@@ -3,36 +3,26 @@
 @section('content')
 
 <div class="container">
-  <h2>動画</h2>
-  <p>{{ $message }}</p>
+
+    <h1>新規投稿</h1>
+    <p>{{ $message }}</p>
+    {{ Form::open(['route' => 'video.store']) }}
+        <div class='form-group'>
+            {{ Form::label('user_name', 'タイトル:') }}
+            {{ Form::text('title') }}
+            {{-- {{ Form::text('title', null) }} --}}
+        </div>
+        <div class='form-group'>
+            {{ Form::label('content', '内容:') }}
+             {{ Form::text('content', null) }}
+        </div>
+        
+        <div class="form-group">
+            {{ Form::submit('作成する', ['class' => 'btn btn-primary']) }}
+            <a href={{ route('video.index') }}>一覧に戻る</a>
+        </div>
+    {{ Form::close() }}
+
 </div>
-
-@can('system-only')
-
-@foreach ($videos as $video)
-  
-  <div class="container">
-    <p>
-
-      <a href='{{ route("video.show", ["id" =>  $video->id]) }}'>
-        {{ $video->id }}:
-        {{ $video->title }}
-      </a>
-
-    <a href={{ route('video.delete') }}>削除</a>
-
-    </p>
-  </div>
-
-@endforeach
-
-<div class="container">
-  <div>
-    <a href={{ route('video.new') }}>新規投稿</a>
-  </div>
-</div>
-
-
-@endcan
 
 @endsection

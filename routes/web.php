@@ -13,6 +13,18 @@ Route::get('/mypage', function () {
     return view('mypage');
 })->name('mypage');
 
+// システム管理者のみ
+Route::group(['middleware' => ['auth', 'can:system-only']], function () {
+    Route::get('/videos', 'VideoController@index')->name('video.index');
+    Route::get('/video/new', 'VideoController@create')->name('video.new');
+    Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
+
+    Route::post('/video/store', 'VideoController@store')->name('video.store');
+
+    Route::get('/video/edit/{id}', 'VideoController@edit')->name('video.edit');
+    Route::post('/video/update/{id}', 'VideoController@update')->name('video.update');
+});
+
 //ミドルウェアでのグループ化
 Route::group(['middleware' => ['auth']], function () {
 
@@ -75,17 +87,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/video/{id}/button_state', 'VideoController@toggleButtonState')->name('video.toggle-button-state');
 });
 
-// システム管理者のみ
-Route::group(['middleware' => ['auth', 'can:system-only']], function () {
-    Route::get('/videos', 'VideoController@index')->name('video.index');
-    Route::get('/video/new', 'VideoController@create')->name('video.new');
-    Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
 
-    Route::post('/video/store', 'VideoController@store')->name('video.store');
-
-    Route::get('/video/edit/{id}', 'VideoController@edit')->name('video.edit');
-    Route::post('/video/update/{id}', 'VideoController@update')->name('video.update');
-});
 
 // BrowsingHistory
 // Route::get('/video/{id}', 'BrowsingHistoryController@index');
