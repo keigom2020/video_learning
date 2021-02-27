@@ -16,7 +16,10 @@ class ArticleController extends Controller
     {
         $message = '記事一覧';
         $articles = Article::all();
-        return view('article.index', ['message' => $message, 'articles' => $articles]);
+        return view('article.index', [
+            'message' => $message, 
+            'articles' => $articles
+        ]);
     }
 
     /**
@@ -24,20 +27,14 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function create(Request $request)
     public function create(Request $request)
     {
-        $message = 'NEW ARTICLE';
-        // return view('article.new', ['message' => $message]);
-
-        // $article = new Article();
-
-        // $article->content = 'Hello BBS';
-        // $article->user_name = 'paiza';
-        // $article->save();
-        // return redirect('/articles');
-        // return view('article.new', ['message' => $message, 'articles' => $articles]);
-        return view('article.new', ['message' => $message]);
-
+        $article = new Article();
+        $article->title = 'titleです。';
+        $article->content = 'contentの内容です。';
+        $article->save();
+        return redirect('/articles');
     }
 
     /**
