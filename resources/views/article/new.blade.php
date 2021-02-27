@@ -12,9 +12,17 @@
             {{ Form::text('title') }}
             {{-- {{ Form::text('title', null) }} --}}
         </div>
+
+        {{--
         <div class='form-group'>
             {{ Form::label('content', '内容:') }}
              {{ Form::text('content', null) }}
+        </div>
+        --}}
+
+        <div class='form-group'>
+            {{ Form::label('content', '内容:') }}
+            {{ Form::textarea('content', null) }}
         </div>
         
         <div class="form-group">
