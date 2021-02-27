@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
 
 //ミドルウェアでのグループ化
 Route::group(['middleware' => ['auth']], function () {
+    Route::post('/video/update_browsing_history/{id}', 'VideoController@updateBrowsingHistory');
 
     // コース一覧
     Route::get('/courses', function () {
