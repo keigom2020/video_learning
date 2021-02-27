@@ -42,12 +42,17 @@ Route::group(['middleware' => ['auth']], function () {
 
     // 記事一覧を表示
     Route::get('/articles', 'ArticleController@index')->name('article.index');
-    Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
     Route::get('/article/new', 'ArticleController@create')->name('article.new');
-    // Route::post('/article', 'ArticleController@store')->name('article.store');
-    
+
+    Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
+
     Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
+
+
+
+    // Route::post('/article', 'ArticleController@store')->name('article.store');
+
 
     // /articleにアクセスしてきたら/articles にリダイレクトさせる
     Route::get('/article', function() {
@@ -76,7 +81,6 @@ Route::group(['middleware' => ['auth', 'can:system-only']], function () {
     Route::get('/videos', 'VideoController@index')->name('video.index');
     Route::get('/video/new', 'VideoController@create')->name('video.new');
     Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
-    // Route::delete('/video/new', 'VideoController@create')->name('video.new');
 
     Route::post('/video/store', 'VideoController@store')->name('video.store');
 
