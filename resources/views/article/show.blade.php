@@ -31,6 +31,11 @@
   <div class="row mt-5">
     <div class="mr-4">
       <a href="{{ route('article.index') }}" class="btn btn-info">一覧に戻る</a>
+
+      @can('system-only')
+      <a href={{ route('article.edit', ["id" =>  $article->id]) }} class='btn btn-outline-primary'>編集</a>
+      @endcan
+
     </div>
 
     <div class="">

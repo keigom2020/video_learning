@@ -42,11 +42,7 @@
         {{ Form::close() }}
       </span>
 
-      <span>
-        {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
-            {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
-        {{ Form::close() }}
-      </span>
+      <a href={{ route('article.edit', ["id" =>  $article->id]) }} class='btn btn-outline-primary'>編集</a>
     </td>
 
     @endcan
