@@ -26,8 +26,10 @@ class VideoController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
-    public function create(Request $request)
+    // public function create(Request $request)
+    public function create()
     {
         $message = 'New Video';
         return view('video.new', ['message' => $message]);
@@ -115,6 +117,7 @@ class VideoController extends Controller
      * @param  \App\Video  $video
      * @return \Illuminate\Http\Response
      */
+    // public function destroy(Request $request, $id, Video $video)
     public function destroy(Request $request, $id, Video $video)
     {
         $video = Video::find($id);

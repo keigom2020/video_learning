@@ -19,7 +19,15 @@
         {{ $video->title }}
       </a>
 
+{{--
     <a href={{ route('video.delete') }}>削除</a>
+  --}}
+
+    <span>
+      {{ Form::open(['method' => 'delete', 'route' => ['video.delete', $video->id]]) }}
+          {{ Form::submit('削除', ['class' => 'btn btn-outline-secondary']) }}
+      {{ Form::close() }}
+    </span>
 
     </p>
   </div>
