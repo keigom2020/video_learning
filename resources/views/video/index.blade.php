@@ -13,10 +13,6 @@
 
 <table>
 @foreach ($videos as $video)
-  
-  
-
-    
 
   <tr>
     <td class="article__id">
