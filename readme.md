@@ -17,7 +17,7 @@ ID, PWは「test@gmail.com」「testtest」です。
 
 ## Installation
 ### githubからローカルにクローン
->git clone {url}
+>git clone https://github.com/keigom2020/video_learning.git
 
 ### npmのモジュールを有効にする
 >npm install
@@ -32,7 +32,9 @@ ID, PWは「test@gmail.com」「testtest」です。
 ## 機能一覧
 - ユーザー登録、ログイン機能
 - ゲストログイン機能
+- 管理者権限の分類機能
 - 動画閲覧機能
+- 動画情報の編集・更新
 
 # 
 
