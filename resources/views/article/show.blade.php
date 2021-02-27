@@ -5,9 +5,7 @@
 <div class="container">
   <div class="row">
     <h2 class="heading__lv2">
-    {{--
       {{ $article->id }}：{{ $article->title }}
-    --}}
     </h2>
     <p>{{ $message }}</p>
   </div>
@@ -19,9 +17,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-    {{--
       {{ $article->content }}
-    --}}
     </div>
 
     <div class="col-md-4">
