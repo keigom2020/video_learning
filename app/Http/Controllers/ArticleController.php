@@ -77,9 +77,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Request $request, $id, Article $article)
     {
-        //
+        $message = '記事を編集する ' . $id;
+        $article = Article::find($id);
+        return view('article.edit', ['message' => $message, 'article' => $article]);
     }
 
     /**
@@ -89,9 +91,14 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Article $article, $id)
     {
-        //
+        $article = Article::find($id);
+
+        $article->title = $request->title;
+        $article->content = $request->content;
+        $article->save();
+        return redirect()->route('article.show', ['id' => $article->id]);
     }
 
     /**
