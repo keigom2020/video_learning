@@ -27,14 +27,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create(Request $request)
     public function create(Request $request)
     {
-        $article = new Article();
-        $article->title = 'titleです。';
-        $article->content = 'contentの内容です。';
-        $article->save();
-        return redirect('/articles');
+        $message = 'New article';
+        return view('article.new', ['message' => $message]);
     }
 
     /**
@@ -46,12 +42,12 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $article = new Article();
-
-        $article->content = 'Hello BBS';
-        // $article->user_name = 'user';
-        $article->title = 'sample_title';
+        $article->title = $request->title;
+        $article->content = $request->content;
         $article->save();
-        return redirect('/articles');
+        // return redirect('/articles');
+        // return redirect('/article.show', ['id' => $article->id]);
+        return redirect()->route('article.index', ['id' => $article->id]);
     }
 
     /**

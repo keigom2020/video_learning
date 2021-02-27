@@ -48,10 +48,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
     Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delete');
+    Route::post('/article', 'ArticleController@store')->name('article.store');
 
 
-
-    // Route::post('/article', 'ArticleController@store')->name('article.store');
 
 
     // /articleにアクセスしてきたら/articles にリダイレクトさせる
