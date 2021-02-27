@@ -31,6 +31,7 @@
     </td>
 
     @can('system-only')
+
     <td class="ml-3 article__btn">
       <span>
         {{ Form::open(['method' => 'delete', 'route' => ['video.delete', $video->id]]) }}
@@ -44,6 +45,7 @@
         {{ Form::close() }}
       </span>
     </td>
+    
     @endcan
   </tr>
 

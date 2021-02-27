@@ -17,7 +17,7 @@ Route::get('/mypage', function () {
 Route::group(['middleware' => ['auth', 'can:system-only']], function () {
     Route::get('/videos', 'VideoController@index')->name('video.index');
     Route::get('/video/new', 'VideoController@create')->name('video.new');
-    Route::delete('/video/delete', 'VideoController@destroy')->name('video.delete');
+    Route::delete('/video/{id}', 'VideoController@destroy')->name('video.delete');
 
     Route::post('/video/store', 'VideoController@store')->name('video.store');
 
