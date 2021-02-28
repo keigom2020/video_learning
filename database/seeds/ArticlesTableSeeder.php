@@ -13,7 +13,7 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('Articles')->insert([
+        DB::table('articles')->insert([
             [
                 "id" => 1,
                 "title" => "3つの具体的事例（マネーリテラシー教育）",
