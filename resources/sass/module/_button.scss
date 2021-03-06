@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   margin-left: auto;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .btn-info {
