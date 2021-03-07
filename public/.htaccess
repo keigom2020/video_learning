@@ -2,23 +2,30 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
+    
 
     Options +FollowSymLinks -Indexes
     RewriteEngine On
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_URI} (.+)/$
 
-    RewriteRule ^ %1 [L,R=301]
-
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+
+    # Handle Front Controller...
+    
     RewriteRule ^ index.php [L]
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteRule ^ %1 [L,R=301]
+
 </IfModule>
 
 
